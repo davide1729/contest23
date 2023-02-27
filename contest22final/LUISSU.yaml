@@ -1,0 +1,16 @@
+name: Allenamento Luiss 2022 - Contest 2
+description: |
+  Contest 2 - _Allenamento Luiss_ 2022
+
+duration: 86400
+window_duration: 18000
+
+tasks:
+    - Problem A
+    - Problem B
+    - Problem C
+    - Problem D
+users:
+    -   token: OHPdCcz7l7d0zijq
+        name: Super
+        surname: Secret
