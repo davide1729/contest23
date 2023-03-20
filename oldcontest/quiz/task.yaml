@@ -1,0 +1,5 @@
+%YAML 1.2
+---
+name: quiz
+description: Quiz
+max_score: 20
