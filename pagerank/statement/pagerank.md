@@ -12,19 +12,19 @@ Ti proponiamo un esempio esplicativo:
 **Input:**
 
 ```
-1
+5
 
-5 3
-abcde
-0 2 1
-1 1 2
+0  1 3 4
+1  0 2 3 4
+2  1 4
+3  0 1 4
+4  0 1 2 3
 ```
 Ovvero:
-- 1 (numero di casi di test)
-- 5 (lunghezza della stringa)    3 (numero di chiavi)
-- abcde (stringa di input)
-- 0 2 1 (3 chiavi: si tratta di 3 fattori di shifting)
-- 1 1 2 (numero di caratteri che ogni chiave shifta)
+- 5, il numero di nodi (compresi i nodi isolati)
+- 0, ossia il primo nodo, seguito da due spazi dai nodi con cui è connesso: 1, 3 e 4.
+
+Dal momento che il primo nodo è sempre 0, se abbiamo 5 nodi l'ultimo sarà il 4.
 
 ---
 
