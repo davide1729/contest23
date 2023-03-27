@@ -16,7 +16,7 @@ Nell'algoritmo in questione, bisogna descrivere il comportamento di un utente ch
 In particolare, si procede come segue:
 - ogni nodo viene inizializzato con un valore di $PR$ iniziale $R_0=1/N$, dove $N$ è il numero di nodi del grafo;
 - a ogni iterazione $t$, si itera su $N$ nodi $i$ per aggiornare il loro valore di $PR$:
-$R_t(i)= \frac \alpha N+(1-\alpha)\sum_{j\in pred(i)} \frac {R_{t-1}(j)} {k_{out}(j)} $ 
+$R_t(i)= \frac \alpha N+(1-\alpha)\sum_{j\in pred(i)} \frac {R_{t-1}(j)} {k_{out}(j)}$ 
     - $\alpha$ rappresenta il **fattore di teletrasporto** o di smorzamento, ossia la probabilità che l'utente interrompa la navigazione e ricominci un nuovo percorso partendo da una nuova pagina randomica.
     - $pred(i)$ è l'insieme dei predecessori $j$ del nodo $i$: ossia l'insieme dei nodi (le pagine) direttamente collegati al nodo $i$.
     - $k_{out}(j)$ rappresenta il numero di collegamenti uscenti dal predecessore $j$, ossia il numero di $pred(j)$, poiché, in un grafo non orientato, $length(pred(i))=k_{in}(i)=k_{out}(i)$.
@@ -50,7 +50,7 @@ Ovvero:
 **Output:**
 
 ```
-Case #1: addee
+Case #1: 
 ```
 
 ---
