@@ -3,11 +3,12 @@
 
 ## Descrizione del problema
 
-In un universo alternativo, l'alter ego cattivo del Professor Alessio Martino è impazzito: dopo una notte tormentata da incubi sulla sua promozione di fine anno, decide di escogitare un piano per far diventare la Luiss Guido Carli l'eccellenza assoluta tra le università italiane. Grazie alle sue doti da programmatore e hacker esperto, accede alle telecamere dell'ufficio del Ministro della Difesa Irene Finocchi. 
+In un universo parallelo al nostro, l'alter ego cattivo del Professor Alessio Martino è impazzito: dopo una notte tormentata dagli incubi, nei quali viene confuso dai suoi studenti per un noto streamer italiano, decide di consolarsi consultando le classifiche degli atenei internazionali.
+Insoddisfatto, decide di escogitare un piano per fare della LUISS Guido Carli l'eccellenza assoluta tra le università italiane, ma in tutte le discipline! Grazie alle sue doti da programmatore e hacker esperto, accede alle telecamere dell'ufficio del Professor Giuseppe Italiano, Ministro della Difesa.
 
-Durante una lunga notte di sorveglianza, riesce ad entrare in possesso dei codici di lancio criptati, così da lanciare sui principali atenei d'Italia delle bombe contenenti un gas che dimezza il quoziente intellettivo di chiunque lo respiri. 
+Durante una lunga notte di sorveglianza, riesce ad entrare in possesso dei codici di lancio criptati, così da lanciare sui principali atenei d'Italia degli ordigni contenenti un gas che dimezza il quoziente intellettivo di chiunque lo respiri. 
 
-C'è però un problema!!!  Le telecamere riprendono la tastiera del Ministro, ma per ovviare a questo, mentre inserisce i codici può spostare il cursore in quattro possibili posizioni: sinistra $[L]$, destra $[R]$, su $[U]$, giù $[D]$, oppure cancellare il carattere con $[C]$.
+C'è però un problema: le telecamere riprendono la tastiera del Ministro. Per ovviare a ciò, mentre inserisce i codici può spostare il cursore in quattro possibili posizioni: sinistra $[L]$, destra $[R]$, su $[U]$, giù $[D]$, oppure cancellare il carattere con $[C]$.
 
 Se vuole riuscire nella sua impresa, il Professor Martino deve scrivere un codice che ritorni i codici di lancio in una matrice (lista di liste).
 
@@ -15,8 +16,9 @@ Se vuole riuscire nella sua impresa, il Professor Martino deve scrivere un codic
 
 ![hacker](hacker.jpg)
 
-Aiutalo a ricostruire il testo digitato!
+*Aiutalo a ricostruire il testo digitato!*
 
+---
 ## Dati di input
 
 La prima riga del file di input contiene un intero $T$, il numero di casi di test. Seguono $T$ casi di test, numerati da $1$ a $T$. Ogni caso di test è preceduto da una riga vuota.
