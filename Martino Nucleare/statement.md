@@ -47,22 +47,6 @@ dove `t` è il numero del caso di test (a partire da $1$) e `x` è la sequenza d
 **Input:**
 
 ```
-1
-
-[C]nc[L][L]cb[C]a[R][R]la[L][L]el[R][R][R]_les[L][L][L]fi
-
-[cancella file]
-[tipo tutti]
-[ora]
-
-[ca]
-[tipo]
-[ora]
-
-ca[D][D]ra[L][L]o
-
-
-Possibile alternativa:
 
 [1 2 3]
 [4 5 6]
@@ -82,7 +66,9 @@ Possibile alternativa:
 **Output:**
 
 ```
-Case #1: cancella_files
+Case #1: [123]
+         [456]
+         [789]
 ```
 
 ---
