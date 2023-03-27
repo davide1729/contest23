@@ -2,20 +2,31 @@
 
 La professoressa Finocchi ha sfidato i tutor: devono riuscire a calcolare quanto sia facile trovare la pagina del Corso di preparazione alle Olimpiadi a partire da vari URL, come quello del sito della LUISS.
 
-PageRank is a centrality measure for nodes in directed networks. It is used to calculate the importance or prestige of Web pages.
+La LUISS ha fornito una serie di grafi non orientati che rappresentano i collegamenti tra vari siti web legati all'ateneo – per esempio, sport.luiss.it oppure impresaemanagement.luiss.it – tra cui è sempre presente il suddetto sito del nostro Corso.
 
-Search engines need it to rank pages that seem equally relevant based on content. Low-quality and spam pages are ranked worse.
-Sergey Brin and Larry Page introduced PageRank in 1998 as a key ingredient of Google.
+Demetrio ha scoperto una cosa: all'interno di questi grafi, il sito più "raggiunto" è proprio quello del Corso. Per questo motivo, ha chiesto a Davide di verificare questa ipotesi tramite l'algoritmo PageRank.
 
-Describes the behavior of a user browsing the Web at random by clicking links from each page to go to the next and assuming that each link in a page has a equal chance of being clicked.
-This process is basically a random walk on the Web graph.
+![I tutor nel Loft](1.jpeg)  
+*I tutor nel Loft*
+---
+PageRank ($PR$) assegna un valore numerico a ogni pagina all'interno del World Wide Web che ne quantifica l'importanza o il prestigio relativi all'interno di questa rete. Fu introdotto nel 1998 da Sergey Brin e Larry Page come ingrediente fondamentale di Google.
 
-Random surfing model with random jumps
-Random surfing model where at each step, with probability ↵, the users stop browsing and starts a new session from a random page
+Nell'algoritmo in questione, bisogna descrivere il comportamento di un utente che naviga nelle reti rappresentate dai grafi forniti in input, cliccando in maniera randomica sui link che collegano le pagine. L'assunzione iniziale è che ogni pagina ha la stessa probabilità iniziale di essere raggiunta, ma le pagine con una centralità maggiore o presenti in aree più dense del grafo saranno quelle più facilmente raggiungibili.
 
+In particolare, si procede come segue:
+- ogni nodo viene inizializzato con un valore di $PR$ iniziale $R_0=1/N$, dove $N$ è il numero di nodi del grafo;
+- a ogni iterazione $t$, si itera su $N$ nodi $i$ per aggiornare il loro valore di $PR$:
+$R_t(i)= \frac \alpha N+(1-\alpha)\sum_{j\in pred(i)} \frac {R_{t-1}(j)} {k_{out}(j)} $ 
+    - $\alpha$ rappresenta il **fattore di teletrasporto** o di smorzamento, ossia la probabilità che l'utente interrompa la navigazione e ricominci un nuovo percorso partendo da una nuova pagina randomica.
+    - $pred(i)$ è l'insieme dei predecessori $j$ del nodo $i$: ossia l'insieme dei nodi (le pagine) direttamente collegati al nodo $i$.
+    - $k_{out}(j)$ rappresenta il numero di collegamenti uscenti dal predecessore $j$, ossia il numero di $pred(j)$, poiché, in un grafo non orientato, $length(pred(i))=k_{in}(i)=k_{out}(i)$.
 
+In parole povere, il $PR$ iniziale di ogni nodo viene aggiornato con ogni iterazione a un valore che dipende dal numero dei collegamenti del nodo, dal numero dei collegamenti dei nodi collegati e così via. In base al coefficiente $\alpha$, il $PR$ convergerà a un valore costante.
 
-Ti proponiamo un esempio esplicativo:
+---
+Aiuta Demetrio e Davide a scoprire la posizione della pagina con il PageRank più alto, altrimenti la professoressa Finocchi troverà presto due nuovi tutor per rimpiazzarli!
+
+---
 
 ## Esempio esplicativo
 **Input:**
@@ -33,7 +44,6 @@ Ovvero:
 - 5, il numero di nodi (compresi i nodi isolati)
 - 0, ossia il primo nodo, seguito da due spazi dai nodi con cui è connesso: 1, 3 e 4.
 
-Dal momento che il primo nodo è sempre 0, se abbiamo 5 nodi l'ultimo sarà il 4.
 
 ---
 
