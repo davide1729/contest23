@@ -7,35 +7,47 @@ import time # this is to get computational time
 import pandas as pd # this is for dataframes
 import math # some math tools for week 5
 
-num_nodes = 5
-p = 0.5
+mypr = {}
+k_out = {}
+N = number_of_nodes
+    
+for i in neighbors:
+    mypr[i]=1/N 
+    k_out[i]=len(neighbors[i])
 
-# Creating the random graph using Erdős–Rényi model.
+# NEW APPROACH
 
-neighbors = {}
-G_er_standard = nx.erdos_renyi_graph(num_nodes, p)
-for node in G_er_standard.nodes():
-    print(node)
-    for i in G_er_standard.neighbors(node):
-        neighbors[node] = []
-    for i in G_er_standard.neighbors(node):
-        neighbors[node].append(i)
-print(neighbors)
-      
-# Drawing the random graph
-#nx.draw_networkx(G_er_standard, node_size=50, with_labels=True)
-#plt.show()
+iterations = 0  
+a = 0.15
+while True:
+    diff = 0
+    mypr2 = mypr.copy() # we create a clone of mypr in order to distinguish two contiguous iterations
+    for i in mypr2:
+        sum = 0
+        for j in neighbors[i]:
+            sum += mypr2[j]/k_out[j]        
+        mypr2[i]= a/N + (1-a)*sum
+    print(mypr2[1])    
+    iterations += 1 # iteration counter
 
-print(num_nodes)
-print()
+    for i in mypr2:
+        diff = abs(mypr[i] - mypr2[i]) # we check if *all* the values are the same
+        if diff < 10**-6: # in order to check the convergence between two iterations
+            a = 1 
+        
+    if a == 1:
+        break
+    
+    mypr = mypr2
+    
+print("Number of iterations:",iterations)
 
-'''for node in neighbors:
-    neigh = str(neighbors[node])
-    neigh = neigh.replace(',','')
-    print(node, neigh[1:-1])'''
 
-for node in neighbors:
-    neigh = " ".join(str(x) for x in neighbors[node])
-    print(node,'',neigh)
+#######################
 
 
+# PageRank scores computation
+pr = nx.pagerank(G)   # returns a dictionary
+
+# Separately save the values of the dictionary
+pr_values = pr.values()
