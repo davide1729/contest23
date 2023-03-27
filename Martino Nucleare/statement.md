@@ -1,29 +1,33 @@
 
----
+# Martino Nucleare (*nukelessio*)
 
 ## Descrizione del problema
 
-Durante la notte un malintenzionato è riuscito ad accedere alle sale computer della Luiss e ha digitato diversi comandi su una tastiera! E' fondamentale riuscire a capire esattamente cosa ha scritto, ma purtroppo non ha lasciato tracce... tranne una: la telecamera installata sul soffitto ha registrato tutti i suoi movimenti sulla tastiera (ma non è riuscita ad inquadrare lo schermo). Dal video riusciamo a capire ogni tasto premuto dal malintenzionato; questo include:
+In un universo alternativo, l'alter ego cattivo del Professor Alessio Martino è impazzito: dopo una notte tormentata da incubi sulla sua promozione di fine anno, decide di escogitare un piano per far diventare la Luiss Guido Carli l'eccellenza assoluta tra le università italiane. Grazie alle sue doti da programmatore e hacker esperto, accede alle telecamere dell'ufficio del Ministro della Difesa Irene Finocchi. 
 
-- lettere a-z o spazi, indicati con il carattere underscore ("_")
-- spostamenti del cursore a destra o sinistra, indicati con \[R\] e \[L\]
-- cancellazione del carattere che precede il cursore, indicato con \[C\].
+Durante una lunga notte di sorveglianza, riesce ad entrare in possesso dei codici di lancio criptati, così da lanciare sui principali atenei d'Italia delle bombe contenenti un gas che dimezza il quoziente intellettivo di chiunque lo respiri. 
 
-![tastiera](picture.png)
+C'è però un problema!!!  Le telecamere riprendono la tastiera del Ministro, ma per ovviare a questo, mentre inserisce i codici può spostare il cursore in quattro possibili posizioni: sinistra $[L]$, destra $[R]$, su $[U]$, giù $[D]$, oppure cancellare il carattere con $[C]$.
 
-Aiutaci a ricostruire il testo digitato!
+Se vuole riuscire nella sua impresa, il Professor Martino deve scrivere un codice che ritorni i codici di lancio in una matrice (lista di liste).
+
+
+
+![hacker](hacker.jpg)
+
+Aiutalo a ricostruire il testo digitato!
 
 ## Dati di input
 
 La prima riga del file di input contiene un intero $T$, il numero di casi di test. Seguono $T$ casi di test, numerati da $1$ a $T$. Ogni caso di test è preceduto da una riga vuota.
 
-Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \[L\], \[R\] oppure \[C\].
+Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \[L\], \[R\], \[U\], \[D\] oppure \[C\].
 
-> _Si tenga presente che un comando \[R\] alla fine della sequenza non ha effetto e un comando \[L\] o \[C\] all'inizio della sequenza non ha effetto._
+> _Si tenga presente che un comando \[R\] alla fine della sequenza non ha effetto e un comando \[L\] o \[C\] all'inizio della sequenza non ha effetto, stesso vale per un comando \[U\] sulla prima sequenza (quella "sopra") mentre \[D\] sull'ultima (quella "sotto") ._
 
 ## Dati di output
 
-Il file di output deve contenere la risposta ai casi di test che sei riuscito a risolvere. Per ogni caso di test che hai risolto, il file di output deve contenere una riga con la dicitura
+Il file di output deve contenere la risposta ai casi di test che sei riuscito a risolvere. Per ogni caso di test che hai risolto, il file di output deve contenere tante righe quante le liste (o righe della matrice) di codice con la dicitura
 
 ```
 Case #t: x
