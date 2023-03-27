@@ -1,8 +1,17 @@
 # PageRank (*pagerank*)
 
-Algoritmo per pagerank
+La professoressa Finocchi ha sfidato i tutor: devono riuscire a calcolare quanto sia facile trovare la pagina del Corso di preparazione alle Olimpiadi a partire da vari URL, come quello del sito della LUISS.
 
+PageRank is a centrality measure for nodes in directed networks. It is used to calculate the importance or prestige of Web pages.
 
+Search engines need it to rank pages that seem equally relevant based on content. Low-quality and spam pages are ranked worse.
+Sergey Brin and Larry Page introduced PageRank in 1998 as a key ingredient of Google.
+
+Describes the behavior of a user browsing the Web at random by clicking links from each page to go to the next and assuming that each link in a page has a equal chance of being clicked.
+This process is basically a random walk on the Web graph.
+
+Random surfing model with random jumps
+Random surfing model where at each step, with probability ↵, the users stop browsing and starts a new session from a random page
 
 
 
