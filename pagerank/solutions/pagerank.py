@@ -7,10 +7,24 @@ import time # this is to get computational time
 import pandas as pd # this is for dataframes
 import math # some math tools for week 5
 
+number_of_nodes = 5
+
+neighbors = {0:[1,3,4],
+             1:[0,2,3,4],
+             2:[1,4],
+             3:[0,1,4],
+             4:[0,1,2,3]
+             }
+
+
+
 mypr = {}
 k_out = {}
 N = number_of_nodes
+
+
     
+
 for i in neighbors:
     mypr[i]=1/N 
     k_out[i]=len(neighbors[i])
@@ -41,13 +55,26 @@ while True:
     mypr = mypr2
     
 print("Number of iterations:",iterations)
+print(mypr)
+max = 0
+for i in mypr:
+    if i+1 >= len(mypr):
+        continue
+    else:
+        if mypr[i+1]>mypr[i]:
+            max = i+1
+
+
+print(max)
+
+    
 
 
 #######################
 
 
 # PageRank scores computation
-pr = nx.pagerank(G)   # returns a dictionary
+#pr = nx.pagerank(G)   # returns a dictionary
 
 # Separately save the values of the dictionary
-pr_values = pr.values()
+#pr_values = pr.values()
