@@ -2,7 +2,7 @@
 
 La Professoressa Finocchi ha sfidato i tutor: devono riuscire a calcolare quanto sia facile trovare la pagina del Corso di preparazione alle Olimpiadi a partire da vari URL, come quello del sito della LUISS.
 
-La LUISS ha fornito una serie di grafi non orientati che rappresentano i collegamenti tra vari siti web legati all'ateneo – per esempio, sport.luiss.it oppure impresaemanagement.luiss.it – tra cui è sempre presente il suddetto sito del nostro Corso.
+La LUISS ha fornito una serie di grafi non orientati che rappresentano i collegamenti tra vari siti web legati all'ateneo – per esempio, *sport.luiss.it* oppure *impresaemanagement.luiss.it* – tra cui è sempre presente il suddetto sito del nostro Corso.
 
 Demetrio ha scoperto una cosa: all'interno di questi grafi, il sito più "raggiungibile" è proprio quello del Corso. Per questo motivo, ha chiesto a Davide di verificare questa osservazione tramite l'algoritmo PageRank.
 
@@ -66,7 +66,8 @@ In questo caso, dopo aver ricostruito il grafo, applicato l'algoritmo con il cor
 
 ## Dati di Input
 Il tuo input sarà dato da:
-- Un valore $\alpha <10, \alpha \in \mathbb{N}$ che rappresenta la parte decimale del fattore di teletrasporto;
+- un valore $\alpha <10, \alpha \in \mathbb{N}$ che rappresenta la parte decimale del fattore di teletrasporto;
+- il numero $N$ di nodi del grafo;
 - L'indice $i$ del $(i+1)$ esimo nodo, seguito da due spazi e dagli indici dei nodi con cui è connesso, separati da uno spazio.
 
 N.B. **tutti** i nodi del grafo sono rappresentati, quindi un nodo isolato sarà presente nell'input ma non sarà seguito da alcun numero.
@@ -76,4 +77,7 @@ Inoltre, si ricorda che nel caso di più casi di test, essi sono separati da una
 - $i$ intero, $\alpha$ naturale;
 - $\alpha <10$;
 - $0 < N \leq 10^3$;
-- $0 \leq i < N$;
+- $0 \leq i < N$.
+
+
+
