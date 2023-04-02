@@ -8,6 +8,7 @@ Demetrio ha scoperto una cosa: all'interno di questi grafi, il sito più "raggiu
 
 ![I tutor nel Loft](1.jpeg)  
 *I tutor nel Loft*
+
 ---
 PageRank ($PR$) assegna un valore numerico a ogni pagina all'interno del World Wide Web che ne quantifica l'importanza o il prestigio relativi all'interno di questa rete. Fu introdotto nel 1998 da Sergey Brin e Larry Page come ingrediente fondamentale di Google.
 
@@ -15,14 +16,13 @@ Nell'algoritmo in questione, bisogna descrivere il comportamento di un utente ch
 
 In particolare, si procede come segue:
 - ogni nodo viene inizializzato con un valore di $PR$ iniziale $R_0=1/N$, dove $N$ è il numero di nodi del grafo;
-- a ogni iterazione $t$, si itera su $N$ nodi $i$ per aggiornare il loro valore di $PR$:
-$R_t(i)= \frac \alpha N+(1-\alpha)\sum_{j\in pred(i)} \frac {R_{t-1}(j)} {k_{out}(j)}$ 
+- a ogni iterazione $t$, si itera su $N$ nodi $i$ per aggiornare il loro valore di 
+$ PR:R_t(i)= \frac \alpha N+(1-\alpha)\sum_{j\in pred(i)} \frac {R_{t-1}(j)} {k_{out}(j)}$ 
     - $\alpha$ rappresenta il **fattore di teletrasporto** o di smorzamento, ossia la probabilità che l'utente interrompa la navigazione e ricominci un nuovo percorso partendo da una nuova pagina randomica.
     - $pred(i)$ è l'insieme dei predecessori $j$ del nodo $i$: ossia l'insieme dei nodi (le pagine) direttamente collegati al nodo $i$.
     - $k_{out}(j)$ rappresenta il numero di collegamenti uscenti dal predecessore $j$, ossia il numero di $pred(j)$, poiché, in un grafo non orientato, $length(pred(i))=k_{in}(i)=k_{out}(i)$.
 
 In parole povere, il $PR$ iniziale di ogni nodo viene aggiornato con ogni iterazione a un valore che dipende dal numero dei collegamenti del nodo, dal numero dei collegamenti dei nodi collegati e così via. In base al coefficiente $\alpha$, il $PR$ convergerà a un valore costante.
-
 
 ---
 
@@ -47,8 +47,6 @@ Ovvero:
 - 0, ossia l'indice del primo nodo, seguito da due spazi e dagli indici dei nodi con cui è connesso, separati da uno spazio: 1, 3 e 4;
 - 1, ossia l'indice del secondo nodo e così via.
 
-
-
 **Output:**
 
 ```
@@ -62,7 +60,6 @@ In questo caso, dopo aver ricostruito il grafo, applicato l'algoritmo con il cor
 *Aiuta Demetrio e Davide a scoprire la posizione della pagina con il PageRank più alto, ossia a verificare che sia quella del nostro Corso; altrimenti, la Professoressa Finocchi troverà presto due nuovi tutor per rimpiazzarli!*
 
 ---
-
 
 ## Dati di Input
 Il tuo input sarà dato da:
