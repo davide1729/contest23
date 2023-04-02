@@ -3,13 +3,13 @@
 
 ## Descrizione del problema
 
-In un universo parallelo al nostro, il gemello malvagio del Professor Alessio Martino è diventato folle. Dopo una notte inquieta, durante la quale sogna di essere scambiato dai suoi studenti per un famoso streamer italiano, decide di distrarsi consultando le classifiche delle università internazionali. Frustrato dalla posizione della sua università, la LUISS Guido Carli, concepisce un piano audace per farla diventare l'eccellenza assoluta tra le università italiane in tutte le discipline!
+Dopo una lunga giornata trascorsa tra lezioni e call di dipartimento, il Professor Martino decide di riposarsi un po' registrando un pezzo inedito con la sua chitarra, e per fare ciò sale al Loft, rispettivamente il laboratorio più moderno e tecnologico della LUISS, gestito dal Professor Marco Iecher.
 
-Grazie alle sue eccezionali abilità di programmazione e di hacking, il malvagio Professor Martino riesce ad accedere alle telecamere dell'ufficio del Ministro della Difesa: Irene Finocchi.Durante una lunga notte di sorveglianza, il perfido professore riesce a scoprire i codici di lancio criptati di alcuni ordigni, progettati per diffondere un gas che dimezza il quoziente intellettivo di chiunque lo respiri. Intende utilizzare questi ordigni per colpire i principali atenei d'Italia, assicurando così la supremazia della LUISS Guido Carli.
+Tuttavia, una volta scalati gli interminabili **sei piani di scale** per arrivare al Loft, scopre che è impossibile accedervi poiché all'interno sono contenute le soluzioni del contest finale del Corso di preparazione alle Olimpiadi Italiane di Informatica. Per aprire la porta è infatti necessario inserire un codice che solamente la Professoressa Finocchi conosce, essendo la Direttrice del Corso di Laurea Triennale in Management and Computer Science.
 
-Tuttavia, c'è un problema: le telecamere riprendono solo i movimenti sulla tastiera del Ministro e non lo schermo. Quindi, per ottenere i codici di lancio, il malvagio Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
+Dopo svariati tentativi, il Professor Martino riesce ad accedere alle registrazioni della telecamera di sicurezza che si trova all'interno dell'ufficio della Professoressa Finocchi, ma scopre un problema che sperava di non incontrare: le telecamere riprendono solo i movimenti sulla tastiera della Professoressa e non lo schermo. Quindi, per ottenere i codici di lancio, il Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
 
-Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${1}$, destra ${2}$, su ${3}$, giù ${4}$, e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il malvagio Professor Martino potrà ottenere i codici di lancio e portare avanti il suo diabolico piano per assicurare il dominio della LUISS Guido Carli sul panorama universitario italiano.
+Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${1}$, destra ${2}$, su ${3}$, giù ${4}$, e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il Professor Martino potrà ottenere il codice di sblocco per il Luiss Loft e potrà registrare il suo nuovo inedito.
 
 
 ![hacker](hacker.jpg)
