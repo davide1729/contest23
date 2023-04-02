@@ -3,13 +3,9 @@
 
 ## Descrizione del problema
 
-In un universo parallelo al nostro, il gemello malvagio del Professor Alessio Martino è diventato folle. Dopo una notte inquieta, durante la quale sogna di essere scambiato dai suoi studenti per un famoso streamer italiano, decide di distrarsi consultando le classifiche delle università internazionali. Frustrato dalla posizione della sua università, la LUISS Guido Carli, concepisce un piano audace per farla diventare l'eccellenza assoluta tra le università italiane in tutte le discipline!
+In un universo parallelo al nostro, il malvagio Professor Alessio Martino, ha sviluppato un piano per far diventare la LUISS Guido Carli l'eccellenza assoluta tra le università italiane. Utilizzando le sue abilità di programmazione e hacking, ha accesso alle telecamere dell'ufficio della Ministra della Difesa, Irene Finocchi, e scopre i codici di lancio criptati di alcuni ordigni carichi di un gas che riduce il quoziente intellettivo di chiunque li respiri. Il professore malvagio ha quindi l'idea di utilizzare questi ordigni per colpire le principali università d'Italia, in modo da garantire la supremazia della LUISS Guido Carli.
 
-Grazie alle sue eccezionali abilità di programmazione e di hacking, il malvagio Professor Martino riesce ad accedere alle telecamere dell'ufficio del Ministro della Difesa: Irene Finocchi.Durante una lunga notte di sorveglianza, il perfido professore riesce a scoprire i codici di lancio criptati di alcuni ordigni, progettati per diffondere un gas che dimezza il quoziente intellettivo di chiunque lo respiri. Intende utilizzare questi ordigni per colpire i principali atenei d'Italia, assicurando così la supremazia della LUISS Guido Carli.
-
-Tuttavia, c'è un problema: le telecamere riprendono solo i movimenti sulla tastiera del Ministro e non lo schermo. Quindi, per ottenere i codici di lancio, il malvagio Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
-
-Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra $L$, destra $R$, su $U$, giù $D$, e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il malvagio Professor Martino potrà ottenere i codici di lancio e portare avanti il suo diabolico piano per assicurare il dominio della LUISS Guido Carli sul panorama universitario italiano.
+Il Professor Martino deve creare un programma che prenda in input una stringa di comandi di spostamento del cursore e numeri, rappresentati dalle direzioni sinistra $L$, destra $R$, su $U$, giù $D$, e inserire i numeri corrispondenti nella matrice. Solo così potrà ottenere i codici di lancio per i suoi ordigni e portare avanti il suo piano malvagio di assicurare la supremazia della LUISS Guido Carli sul panorama universitario italiano.
 
 
 ![hacker](hacker.jpg)

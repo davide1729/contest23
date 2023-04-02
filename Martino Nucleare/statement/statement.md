@@ -9,7 +9,7 @@ Tuttavia, una volta scalati gli interminabili **sei piani di scale** per arrivar
 
 Dopo svariati tentativi, il Professor Martino riesce ad accedere alle registrazioni della telecamera di sicurezza che si trova all'interno dell'ufficio della Professoressa Finocchi, ma scopre un problema che sperava di non incontrare: le telecamere riprendono solo i movimenti sulla tastiera della Professoressa e non lo schermo. Quindi, per ottenere il codice di sblocco, il Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
 
-Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${1}$, destra ${2}$, su ${3}$, giù ${4}$, e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il Professor Martino potrà ottenere il codice di sblocco per il Luiss Loft e potrà registrare il suo nuovo inedito.
+Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${<}$, destra ${>}$, su "^", giù "_", e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il Professor Martino potrà ottenere il codice di sblocco per il Luiss Loft e potrà registrare il suo nuovo inedito.
 
 
 ![hacker](hacker.jpg)
@@ -21,9 +21,9 @@ Il programma deve essere in grado di decodificare i movimenti del cursore, rappr
 
 La prima riga del file di input contiene un intero $T$, il numero di casi di test. Seguono $T$ casi di test, numerati da $1$ a $T$. Ogni caso di test è preceduto da una riga vuota.
 
-Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \{1\} (sinistra), \{2\} (destra), \{3\} (su), \{4\} (giù).
+Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \{<\} (sinistra), \{>\} (destra), \{^\} (su), \{_\} (giù).
 
-> _Si tenga presente che un comando  \{2\} (destra) alla fine della sequenza non ha effetto e un comando \{1\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{3\} (su) sulla prima sequenza (quella "sopra") e \{4\} (giù) sull'ultima sequenza (quella "sotto")._
+> _Si tenga presente che un comando  \{>\} (destra) alla fine della sequenza non ha effetto e un comando \{<\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{^\} (su) sulla prima sequenza (quella "sopra") ((e \{_\} (giù) sull'ultima sequenza (quella "sotto").))_
 
 ## Dati di output
 
@@ -48,7 +48,7 @@ dove `t` è il numero del caso di test (a partire da $1$) e `x` è la sequenza d
 
 ```
 
-"1{4}{4}89{1}{1}7{3}5{1}4{2}{2}6{3}23"
+"1{_}{_}89{<}{<}7{^}5{<}4{>}{>}6{^}23"
 
 ```
 
@@ -56,16 +56,14 @@ dove `t` è il numero del caso di test (a partire da $1$) e `x` è la sequenza d
 **Output:**
 
 ```
-Case #1: [123]
-         [456]
-         [789]
+Case #1: [[123],[456],[789]]
 ```
 
 ---
 
 ## Spiegazione
 
-Analizziamo passo per passo la stringa di input "1{4}{4}89{1}{1}7{3}5{1}4{2}{2}6{3}23" e come essa viene tradotta nella matrice desiderata:
+Analizziamo passo per passo la stringa di input "1{_}{_}89{<}{<}7{^}5{<}4{>}{>}6{^}23" e come essa viene tradotta nella matrice desiderata:
 
 Iniziamo con una matrice vuota e indichiamo con una sbarra la posizione del cursore: "|".
 ```
@@ -75,7 +73,7 @@ Il primo comando "1" inserisce il numero 1 nella matrice e sposta il cursore a d
 ```
 [1|]
 ```
-I seguenti due comandi ({4}{4}) spostano il cursore di due posizioni in giù, creando due nuove righe vuote:
+I seguenti due comandi ({_}{_}) spostano il cursore di due posizioni in giù, creando due nuove righe vuote:
 ```
 riga 1: [1]
 riga 2: []
@@ -87,7 +85,7 @@ riga 1: [1]
 riga 2: []
 riga 3: [89|]
 ```
-I seguenti due comandi ({1}{1}) spostano il cursore di due posizioni a sinistra:
+I seguenti due comandi ({<}{<}) spostano il cursore di due posizioni a sinistra:
 ```
 riga 1: [1]
 riga 2: []
@@ -99,7 +97,7 @@ riga 1: [1]
 riga 2: []
 riga 3: [7|89]
 ```
-Il seguente comando ({3}) sposta il cursore di una posizione in su:
+Il seguente comando ({^}) sposta il cursore di una posizione in su:
 ```
 riga 1: [1]
 riga 2: [|]
@@ -111,7 +109,7 @@ riga 1: [1]
 riga 2: [5|]
 riga 3: [789]
 ```
-Il seguente comando ({1}) sposta il cursore di una posizione a sinistra:
+Il seguente comando ({<}) sposta il cursore di una posizione a sinistra:
 ```
 riga 1: [1]
 riga 2: [|5]
@@ -123,13 +121,13 @@ riga 1: [1]
 riga 2: [4|5]
 riga 3: [789]
 ```
-Il seguente comando ({2}) sposta il cursore di una posizione a destra:
+Il seguente comando ({>}) sposta il cursore di una posizione a destra:
 ```
 riga 1: [1]
 riga 2: [45|]
 riga 3: [789]
 ```
-Il seguente comando ({2}) sposta il cursore di una posizione a destra, ma poiché si trova già all'estremo, non succede nulla:
+Il seguente comando ({>}) sposta il cursore di una posizione a destra, ma poiché si trova già all'estremo, non succede nulla:
 ```
 riga 1: [1]
 riga 2: [45|]
@@ -141,7 +139,7 @@ riga 1: [1]
 riga 2: [456|]
 riga 3: [789]
 ```
-Il seguente comando ({3}) sposta il cursore di una posizione in su:
+Il seguente comando ({^}) sposta il cursore di una posizione in su:
 ```
 riga 1: [1|]
 riga 2: [456]
