@@ -21,7 +21,7 @@ def decoder(test):
         elif i == '>':
             cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1] + 1)
         elif i == '<':
-            cursor_index[1] = max(0, cursor_index[1] - 2)
+            cursor_index[1] = max(0, cursor_index[1] - 1)
             #print(f"Cursor index: {cursor_index[1]}")
         elif i.isdigit():
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
@@ -33,5 +33,15 @@ def decoder(test):
         result.append(matrix[n])
     return result
 
-test = r"1{_}{_}89{<}{<}7{^}5{<}4{>}{>}6{^}23"
-print(decoder(test)) # -> [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+test_list = {r"1{>}2{_}3{>}4{<}5{>}6{<}7{>}8{<}9" : [[1,2],[3,5,4,7,6,9,8]],
+r"1{>}23{_}4{>}56{_}7{>}89" : [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+r"1{_}23{^}4{_}56{^}7{_}89" : [[1, 4, 7], [2, 3, 5, 8, 9, 6]],
+r"1{>}2{>}3{<}{_}4{>}5{>}6{<}{_}7{>}8{>}9" : [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
+
+for tests in test_list:
+    print(f"Test: {tests}\n")
+    print(f"Expected: {test_list[tests]}\n")
+    print(f"Result: {decoder(tests)}\n")
+    print(f"Passed: {decoder(tests) == test_list[tests]}\n")
+    print()
+
