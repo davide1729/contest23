@@ -6,7 +6,7 @@ La LUISS ha fornito una serie di grafi non orientati che rappresentano i collega
 
 Demetrio ha scoperto una cosa: all'interno di questi grafi, il sito più "raggiungibile" è proprio quello del Corso. Per questo motivo, ha chiesto a Davide di verificare questa osservazione tramite l'algoritmo PageRank.
 
-![I tutor nel Loft](1.jpeg)  
+![I tutor nel Loft](loft.jpeg)  
 *I tutor nel Loft*
 
 ---

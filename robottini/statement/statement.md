@@ -44,6 +44,14 @@ Il tuo input, per ciascun caso di test, sarà dato da:
 
 ---
 
+## Assunzioni
+- $N \geq 0$ intero;
+- $M \geq 2$ intero;
+- $2 \leq m_i \leq M$;
+- $0 \leq p_i \leq P$;
+
+---
+
 ## Esempio esplicativo
 **Input:**
 
@@ -82,11 +90,3 @@ Nel secondo caso di test, la potenza totale della squadra migliore è 177, infat
 ---
 
 *Aiuta la Professoressa Sinaimeri a creare la squadra di robot più forte per ogni configurazione dello store!*
-
----
-
-## Assunzioni
-- $N \geq 0$ intero;
-- $M \geq 2$ intero;
-- $2 \leq m_i \leq M$;
-- $0 \leq p_i \leq P$;
