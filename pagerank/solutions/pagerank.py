@@ -67,8 +67,11 @@ for t in range(T):
     input()
     N = int(input())
     neighbors = {}
-    for node in N:
+    for node in range(0,N):
+        print(node)
         neighbors[node] = []
+        keys = [ int(x) for x in input().strip().split(" ") ]
+        print(keys)
         
 
 
