@@ -38,7 +38,7 @@ for t in range(1,T+1):
     boys=[0] #list with the gender (1 for male, 0 for female)
     points=[0] #list with the scores 
     
-    for i in range(N):
+    for i in range(K):
         ln=input().split()
         points.append(int(ln[0]))
         experiences.append(int(ln[1]))

@@ -38,7 +38,7 @@ def average_cases():
     K=random.randint(1,MAXK)
     P=random.randint(0,100)
     E=random.randint(1,K*5)
-    N=random.randint(20,K)
+    N=random.randint(1,K)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
