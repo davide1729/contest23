@@ -11,20 +11,18 @@
 import random
 
 # Constraint
-'''MAXK = 5*10**2
+MAXK = 5*10**2
 MAXN = MAXK
 MAXM = 25*10**2
 MAXP = 100
-MAX_point=200'''
+MAX_experience=5
+MIN_experience=1
+MAX_point=200
 
-MAXK = 20
-MAXN = MAXK
-MAXM = 10
-MAXP = 100
 
 
 def easy_cases():
-    K=random.randint(10,MAXK)
+    K=random.randint(10,20)
     P=100
     E=100
     N=K

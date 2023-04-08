@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from itertools import combinations
 
 NAME = 0
@@ -5,8 +7,6 @@ P = 1
 E = 2
 G = 3
 MALE = 1
-
-
 
 def select_team(candidates, K, M, PERC):
     maxP = 0
