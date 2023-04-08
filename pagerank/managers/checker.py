@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 
-#
-# Checker Final Contest LUISS ... 2023
-# Task n. x "Nome completo task"
-# autori
-#
+#####
+# Checker Final Contest LUISSTraining 2023
+# Task n. 3 "PageRank"
+# Demetrio F. Cardile, Davide Beltrame
+#####
 
 from distutils.command.build_scripts import first_line_re
-# import librerie necessarie
+import networkx as nx
 from functools import lru_cache
 from itertools import accumulate
 from parser import Parser
@@ -66,6 +66,25 @@ def pagerank():
             if mypr[i+1]>mypr[i]:
                 max = i+1
 
+def pagerank2():
+
+    G = nx.Graph()
+    G.add_nodes_from(neighbors.keys())
+    for node, neighbours in neighbors.items():
+        for neighbour in neighbours:
+            G.add_edge(node, neighbour)
+
+    pr = nx.pagerank(G)
+
+    global max
+    max = 0
+    for i in pr:
+        if i+1 >= len(pr):
+            continue
+        else:
+            if pr[i+1]>pr[i]:
+                max = i+1
+
 for t in range(T):
     task_input.readline()
     N = int(task_input.readline())
@@ -76,7 +95,6 @@ for t in range(T):
         neighbors[node].remove(neighbors[node][0])
     pagerank()
     res = max
-	# mettere soluzione in res
     outputs.append(res)
 
 def evaluate(num, stream):
@@ -91,27 +109,3 @@ def evaluate(num, stream):
 parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False)
 
 print(json.dumps(parser.run()))
-
-'''N = int(task_input.readline())
-    neighbors = {}
-    for node in range(0,N):
-        neighbors[node] = []
-        neighbors[node] = [ int(x) for x in task_input.readline().strip().split(" ") ]
-        neighbors[node].remove(neighbors[node][0])
-    pagerank()
-    res = max
-	# mettere soluzione in res
-	outputs.append(res)
-
-def evaluate(num, stream):
-    correct_output = outputs[num-1] # quelli del checker
-    user_output = stream.str() # quello della soluzione
-    stream.end()
-    if user_output == correct_output:
-        return 1.0
-    else:
-        return 0.0
-
-parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False)
-
-print(json.dumps(parser.run()))'''

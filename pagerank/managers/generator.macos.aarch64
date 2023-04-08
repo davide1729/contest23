@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+#####
+# Final Contest LUISSTraining 2023
+# Task n. 3 "PageRank"
+# INPUT GENERATOR
+# Demetrio F. Cardile, Davide Beltrame
+#####
+
 import random #random generator
 import networkx as nx #this is for network
 import matplotlib.pyplot as plt #this is for drawing
@@ -30,7 +39,7 @@ print(T)
 print(a)
 for i in range(1,T+1):
     
-    num_nodes = random.randint(1,1000)
+    num_nodes = random.randint(1,10)
     p = 0.5
     graph_maker()
     print()

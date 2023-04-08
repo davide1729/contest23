@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+
+# soluzione pagerank built-in
+# Demetrio e Davide
+
 import networkx as nx #this is for network
 
 T = int(input())
