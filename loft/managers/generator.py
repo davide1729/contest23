@@ -6,7 +6,7 @@ def generate_test_cases(num_cases, min_len, max_len):
     
     for _ in range(num_cases):
         input_len = random.randint(min_len, max_len)
-        input_string = ""
+        input_string = r""
         
         for _ in range(input_len):
             if random.random() < 0.5:   # Adjust the probability of digits

@@ -1,12 +1,15 @@
-# **Breaking into Loft** (*loft*)
+# **Breaking into LOFT** (*loft*)
 
-Dopo una lunga giornata trascorsa tra lezioni e call di dipartimento, il Professor Martino decide di riposarsi un po' registrando un pezzo inedito con la sua chitarra, e per fare ciò sale al Loft, il laboratorio polifunzionale più moderno e tecnologico della LUISS, gestito dal Professor Marco Iecher.
+Dopo una lunga giornata trascorsa tra lezioni e call di dipartimento, il Professor Martino decide di riposarsi un po' registrando un pezzo inedito con la sua chitarra, e per fare ciò sale al LOFT (Laboratory Of Fabulous Things), il laboratorio polifunzionale più moderno e tecnologico della LUISS, gestito dal Professor Marco Iecher.
 
-Tuttavia, una volta scalati gli interminabili **sei piani di scale** per arrivare al Loft, scopre che è impossibile accedervi poiché all'interno sono contenute le soluzioni del contest finale del nostro Corso. Per aprire la porta è infatti necessario inserire un codice che solamente il Professor Laura conosce.
+Tuttavia, una volta scalati gli interminabili **sei piani di scale** per arrivare al LOFT, scopre che è impossibile accedervi poiché all'interno sono contenute le soluzioni del contest finale del nostro Corso. Per aprire la porta è infatti necessario inserire un codice che solamente il Professor Laura conosce.
 
-Dopo svariati tentativi, il Professor Martino riesce ad accedere alle registrazioni della telecamera di sicurezza che si trova all'interno dell'ufficio della Professor Laura, ma scopre un problema che sperava di non incontrare: le telecamere riprendono solo i movimenti sulla tastiera del Professore e non lo schermo. Quindi, per ottenere il codice di sblocco, il Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
+Dopo svariati tentativi, il Professor Martino riesce ad accedere alle registrazioni della telecamera di sicurezza che si trova all'interno dell'ufficio del Professor Laura, ma scopre un problema che sperava di non incontrare: le telecamere riprendono solo i movimenti sulla tastiera del Professore e non lo schermo. Quindi, per ottenere il codice di sblocco, il Professor Martino deve creare un programma che prenda in input una stringa composta da numeri e comandi di spostamento del cursore (freccette direzionali).
 
-Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${<}$, destra ${>}$, su "^", giù "_", e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il Professor Martino potrà ottenere il codice di sblocco per il Luiss Loft e potrà registrare il suo nuovo inedito.
+Il programma deve essere in grado di decodificare i movimenti del cursore, rappresentati dalle direzioni sinistra ${<}$, destra ${>}$, su "^", giù "_", e inserire i numeri corrispondenti nella matrice (una lista di liste). Solo così il Professor Martino potrà ottenere il codice di sblocco per il Luiss LOFT e potrà registrare il suo nuovo inedito.
+
+N.B. 
+Quando il cursore viene mosso alla riga (lista) dopo o a quella prima, verrà posizionato dopo l'ultimo elemento della lista.
 
 ![hacker](hacker.jpg)
 
