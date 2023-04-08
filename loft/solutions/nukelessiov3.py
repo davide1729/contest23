@@ -53,4 +53,3 @@ for t in range(T):
 #     print(f"Result: {decoder(tests)}\n")
 #     print(f"Passed: {decoder(tests) == test_list[tests]}\n")
 #     print()
-
