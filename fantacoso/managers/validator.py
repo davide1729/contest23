@@ -2,7 +2,7 @@
 
 #####
 # LUISS Final Contest 2023
-# Task n. x "fantacos"
+# Task n. x "fantacoso"
 # INPUT VALIDATOR
 # Michele Turco, Chiara Baldoni
 #####
