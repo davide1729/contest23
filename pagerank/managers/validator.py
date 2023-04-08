@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
-#
-# Generator Final Contest LUISS ... 2023
+#####
+# Final Contest LUISSTraining 2023
 # Task n. 3 "PageRank"
+# INPUT VALIDATOR
 # Demetrio F. Cardile, Davide Beltrame
-#
-
-# import librerie necessarie
+#####
 
 T = float(input()) # 25
 assert T == int(T)
@@ -22,7 +21,7 @@ for t in range(T):
     N = float(input())
     assert N == int(N)
     N = int(N)
-    assert 0 < N <= 1000
+    assert 0 < N <= 2000
     for i in range(N):
         nodes = input().strip().split(" ")
         print(nodes)

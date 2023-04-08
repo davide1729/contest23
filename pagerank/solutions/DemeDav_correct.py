@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
-# soluzione pagerank
-# Demetrio e Davide
+#####
+# Final Contest LUISSTraining 2023
+# Task n. 3 "PageRank"
+# CORRECT SOLUTION
+# Demetrio F. Cardile, Davide Beltrame
+#####
 
 import time # this is to get computational time
 

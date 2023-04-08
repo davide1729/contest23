@@ -95,10 +95,10 @@ for t in range(T):
         neighbors[node].remove(neighbors[node][0])
     pagerank()
     res = max
-    outputs.append(res)
+    outputs.append(str(res))
 
 def evaluate(num, stream):
-    correct_output = outputs[num] # quelli del checker
+    correct_output = outputs[num-1] # quelli del checker
     user_output = stream.str() # quello della soluzione
     stream.end()
     if user_output == correct_output:
