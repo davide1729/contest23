@@ -11,7 +11,7 @@ Ogni scuola ambisce a diventare la *scuola dei chad* ed è quindi fondamentale s
 
 La prima riga del file di input contiene un intero $T$, il numero di casi di test. Seguono $T$ casi di test, numerati da $1$ a $T$. Ogni caso di test è preceduto da una riga vuota.
 
-Ciascun caso di test è composto da $N+1$ righe. La prima riga contiene quattro interi separati da uno spazio: il primo intero rappresenta $K$, il numero di studenti della scuola che hanno preso parte alle lezioni, il secondo rappresenta $N$, il massimo numero di studenti selezionabili, il terzo rappresenta $M$, l'esperienza massima degli studenti da selezionare per la gara ed il quarto $P$, la percentuale massima di ragazzi che possono essere inseriti in squadra. Ciascuna delle seguenti $N$ righe contiene tre interi $P_i$ e $E_i$ $G_i$ separati da uno spazio: rispettivamente $P_i$ è il punteggio realizzato dallo studente $i$-esimo, $E_i$ sono gli anni di esperienza dello studente $i$-esimo, $G_i$ stabilisce se lo studente $i$-esimo è maschio (1) o femmina (0) per $i$ che va da $1$ a $N$.  
+Ciascun caso di test è composto da $N+1$ righe. La prima riga contiene quattro interi separati da uno spazio: il primo intero rappresenta $K$, il numero di studenti della scuola che hanno preso parte alle lezioni, il secondo rappresenta $N$, il massimo numero di studenti selezionabili, il terzo rappresenta $M$, la massima esperienza media degli studenti da selezionare ed il quarto $P$, la percentuale massima di ragazzi che possono essere inseriti in squadra. Ciascuna delle seguenti $N$ righe contiene tre interi $P_i$ e $E_i$ $G_i$ separati da uno spazio: rispettivamente $P_i$ è il punteggio realizzato dallo studente $i$-esimo, $E_i$ sono gli anni di esperienza dello studente $i$-esimo, $G_i$ stabilisce se lo studente $i$-esimo è maschio (1) o femmina (0) per $i$ che va da $1$ a $N$.  
 
 ## Dati di output
 
@@ -28,7 +28,7 @@ dove `t` è il numero del caso di test (a partire da $1$) e `L` rappresenta gli 
 - $1 \le K \le 1\,000$.
 - $1 \le N \le 1\,000$.
 - $1 \le M \le 5\,000$.
-- $0 \le P \le 100$.
+- $0 \le P \le 200$.
 - $1 \le P_i \le 1\,000$.
 - $1 \le E_i \le 5$.
 - $0 \le G_i \le 1$.
