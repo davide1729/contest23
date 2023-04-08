@@ -28,8 +28,8 @@ dove `t` è il numero del caso di test (a partire da $1$) e `L` rappresenta gli 
 - $1 \le K \le 1\,000$.
 - $1 \le N \le 1\,000$.
 - $1 \le M \le 5\,000$.
-- $0 \le P \le 200$.
-- $1 \le P_i \le 1\,000$.
+- $0 \le P \le 100$.
+- $1 \le P_i \le 200$.
 - $1 \le E_i \le 5$.
 - $0 \le G_i \le 1$.
 
