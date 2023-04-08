@@ -26,7 +26,7 @@ def easy_cases():
     P=100
     E=100
     N=K
-    print(K,N,M,P)
+    print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
          experience = random.randint(1, 5)  # generate a random number for experience, not exceeding M
