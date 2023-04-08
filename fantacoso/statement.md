@@ -1,28 +1,17 @@
-# **FantaOlimpiadi** (*fantacoso*)
+# Fantacoso (*fantacoso*) (*da modificare*)
 
-Il professor Italiano ha deciso di estendere l'invito a partecipare alle FantaOlimpiadi alle scuole degli studenti partecipanti al nostro corso. Ogni scuola può selezionare un  numero massimo $N$ di ragazzi e sommare i punteggi da loro ottenuti durante le lezioni. La scuola con la somma punti maggiore verrà premiata tramite il conferimento del titolo di ***Scuola dei Chad***.
+Il professor Martino ha deciso di estendere l'invito a partecipare alle fantaolimpiadi alle scuole degli studenti coinvolti. Ogni scuola può selezionare un massimo numero $N$ di ragazzi e sommare i punteggi da loro ottenuti durante le lezioni. La scuola con la somma punti maggiore verrà premiata tramite il conferimento del titolo di *scuola dei chad*.
 
-![FantaCoso](FantaCoso.png)  
-*Le regole originali del FantaCoso*
-
----
-
-Per evitare che le scuole con studenti più esperti siano eccessivamente favorite nella competizione, il professor Italiano stabilisce che la media degli anni di esperienza (anni di frequentazione del corso) dei componenti della squadra (approssimata alla prima cifra intera) deve essere la stessa $M$ per tutte le scuole. Ad esempio, se viene stabilito che la media degli anni di esperienza della squadra sia $4$, una scuola potrà scegliere uno studente del quinto ed uno del terzo anno ($M=4$) ma non uno studente del quinto ed uno del primo anno($M=3$).
+Per evitare che scuole con studenti più esperti siano eccessivamente favorite nella competizione, il professor Martino stabilisce che la media degli anni di esperienza (anni di frequentazione del corso) dei componenti della squadra (approssimata alla prima cifra intera) deve essere la stessa $M$ per tutte le scuole. Ad esempio, se viene stabilito che la media degli anni di esperienza della squadra sia $4$, una scuola potrà scegliere uno studente del quinto ed uno del terzo anno (M=4) ma non uno studente del quinto ed uno del primo anno(M=3).
 Inoltre, al fine di coinvolgere tutti gli studenti, una squadra non può avere una componente maschile o femminile superiore ad una prestabilita percentuale $P$. Se la percentuale scelta è 80%, una squadra di 10 studenti non può essere composta da più di 8 ragazzi o più di 8 ragazze.
 
-Ogni scuola ambisce a diventare la *Scuola dei Chad* ed è quindi fondamentale scegliere la squadra adatta al fine di massimizzare il punteggio.
+Ogni scuola ambisce a diventare la *scuola dei chad* ed è quindi fondamentale scegliere la squadra adatta al fine di massimizzare il punteggio.
 
 ## Dati di input
 
 La prima riga del file di input contiene un intero $T$, il numero di casi di test. Seguono $T$ casi di test, numerati da $1$ a $T$. Ogni caso di test è preceduto da una riga vuota.
 
-Ciascun caso di test è composto da $N+1$ righe. La prima riga contiene quattro interi separati da uno spazio: 
-- il primo intero $K$ rappresenta  il numero di studenti della scuola che hanno preso parte alle lezioni;
-- il secondo $N$ rappresenta il massimo numero di studenti selezionabili;
-- il terzo rappresenta $M$, la media degli anni di frequentazione degli studenti da selezionare per la gara;
-- il quarto $P$, la massima percentuale di ragazzi o ragazze che possono essere inseriti in squadra. 
-
-Ciascuna delle seguenti $N$ righe contiene tre interi $P_i$ , $E_i$ e $G_i$ separati da uno spazio: rispettivamente $P_i$ è il punteggio realizzato dallo studente $i$-esimo, $E_i$ sono gli anni di esperienza dello studente $i$-esimo, $G-i$ stabilisce se lo studente è maschio (1) o femmina (0) per $i$ che va da $1$ a $N$.  
+Ciascun caso di test è composto da $N+1$ righe. La prima riga contiene quattro interi separati da uno spazio: il primo intero rappresenta $K$ il numero di studenti della scuola che hanno preso parte alle lezion, il secondo rappresenta $N$, il massimo numero di studenti selezionabili, il terzo rappresenta $M$, la media degli studenti da selezionare per la gara ed il quarto $P$, la massima percentuale di ragazzi o ragazze che possono essere inseriti in squadra. Ciascuna delle seguenti $N$ righe contiene tre interi $P_i$ e $E_i$ $G_i$ separati da uno spazio: rispettivamente $P_i$ è il punteggio realizzato dallo studente $i$-esimo, $E_i$ sono gli anni di esperienza dello studente $i$-esimo, $G-i$ stabilisce se lo studente è maschio(1) o femmina (0) per $i$ che va da $1$ a $N$.  
 
 ## Dati di output
 
@@ -54,7 +43,7 @@ dove `t` è il numero del caso di test (a partire da $1$) e `L` rappresenta gli 
 ```
 2
 
-4 2 4 60
+4 2 4 90
 160 4 1
 85 1 1
 90 2 1
@@ -81,9 +70,9 @@ Case #2: 5 4 3
 
 ## Spiegazione
 
-Nel **primo caso d'esempio**, abbiamo da scegliere due studenti, con esperienza media di 4 anni ed una percentuale massima di ragazzi o ragazze nella squadra inferiore o uguale al 60%. La soluzione di puntegggio totale massimo è dato dagli studenti 1 e 4, che hanno punteggio totale di 230 ed esperienza media di 4 anni. Inoltre la percentuale di ragazzi (50%) e quella di ragazze (50%) non supera quella prestabilita (60%).
+Nel **primo caso d'esempio** abbiamo da scegliere due studenti, con esperienza media di 4 anni ed una percentuale massima di ragazzi o ragazze nella squadra inferiore o uguale al 60%. La soluzione di puntegggio totale massimo è dato dagli studenti 1 e 4, che hanno punteggio totale di 230 ed esperienza media di 4 anni. Inoltre la percentuale di ragazzi(50%) e quella di ragazze (50%) non supera quella prestabilita (60%)
 
 
 ---
 
-Nel **secondo caso d'esempio**, abbiamo da scegliere tre studenti, con esperienza media di 3 anni ed una percentuale massima di ragazzi o ragazze nella squadra inferiore o uguale al 70%. La soluzione di punteggio totale massimo è data dagli studenti 5 4 e 3, che hanno punteggio totale 240 ed esperienza media di 3 anni. Inoltre la percentuale di ragazzi (33%) e quella di ragazze (67%) non supera quella prestabilita (70%).
+Nel **secondo caso d'esempio** abbiamo da scegliere tre studenti, con esperienza media di 3 anni ed una percentuale massima di ragazzi o ragazze nella squadra inferiore o uguale al 70%. La soluzione di punteggio totale massimo è data dagli studenti 5 4 e 3, che hanno punteggio totale 240 ed esperienza media di 3 anni. Inoltre la percentuale di ragazzi(33%) e quella di ragazze (67%) non supera quella prestabilita (70%)
