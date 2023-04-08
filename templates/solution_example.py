@@ -13,5 +13,6 @@ T = int(input()) # numero di casi di test
 
 for t in range(T):
 	input() # spazio
+	res = "soluzione"
     # adattare la risoluzione per inserirla in "res"
 	print(f"Case #{t+1}: {res}") # output corretto

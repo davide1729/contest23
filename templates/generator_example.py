@@ -11,61 +11,43 @@
 import random
 
 # Constraint
-MAXN = 100
+N = 100
 Naverage = 30
 Nintermed = 50
-MAXK = 100
-MAXC = MAXK
+K = 100
+MAXC = N
 MAXk = 10**3
-MAXc = MAXN
+MAXc = N
 
 def easy_cases():
     
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 def average_cases():
     
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 def intermediate_cases():
     
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 def advanced_cases():
 
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 def shift_keys_0_case():
     
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 def chars_0_cases():
 
     #structure of input_file
     print(N, K)
-    print(random_str)
-    print(*keys_list, sep=' ')
-    print(*chars_list, sep=' ')
 
 CASES = [easy_cases]*2 + [average_cases]*4 + [intermediate_cases]*4 + [advanced_cases]*8 + [shift_keys_0_case]*4 + [chars_0_cases]*3
 
