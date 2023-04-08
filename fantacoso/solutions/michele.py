@@ -29,7 +29,7 @@ for t in range(1,T+1):
     ln=input().split("")
     K=int(ln[0]) #number of students in the school
     N=int(ln[1]) #maximum number of students that can be selected for a team
-    M=int(ln[2]) #maximum average experience
+    E=int(ln[2]) #maximum experience
     P=int(ln[3]) #maximum percentage of boys
 
     experiences=[0] #list with the experiences for boys and girls
@@ -41,7 +41,7 @@ for t in range(1,T+1):
         points.append(int(ln[0]))
         experiences.append(int(ln[1]))
         boys.append(int(ln[2]))
-    res=knapsack(boys,experiences,points,P,M,N)[1]
+    res=knapsack(boys,experiences,points,P,E,N)[0]
 
     print("Case #{}: ".format(t), end="")
     for e in res:
