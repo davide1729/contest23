@@ -63,7 +63,7 @@ def intermediate_cases():
 def advanced_cases():
     K=random.randint(300,500)
     P=random.randint(0,100)
-    E=random.randint(1000,2000)
+    E=random.randint(1001,2000)
     N=random.randint(200,K)
     print(K,N,E,P)
     for i in range(K):
