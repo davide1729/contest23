@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+#####
+# Final Contest LUISSTraining 2023
+# Task n. 3 "PageRank"
+# PARTIALLY CORRECT SOLUTION
+# Demetrio F. Cardile, Davide Beltrame
+#####
+
 import networkx as nx #this is for network
 
 T = int(input())

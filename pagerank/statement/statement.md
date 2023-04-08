@@ -73,7 +73,7 @@ Inoltre, si ricorda che nel caso di più casi di test, essi sono separati da una
 ## Assunzioni
 - $i$ intero, $\alpha$ naturale;
 - $\alpha <10$;
-- $0 < N \leq 10^3$;
+- $0 < N \leq 2*10^3$;
 - $0 \leq i < N$.
 
 
