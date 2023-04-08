@@ -9,7 +9,8 @@ def generate_test_cases(num_cases, min_len, max_len):
         input_string = ""
         
         for _ in range(input_len):
-            if random.random() < 0.5:  # Adjust the probability of digits vs. commands (0.5 should mean 50% chance of a digit)
+            if random.random() < 0.5:   # Adjust the probability of digits
+                                        #vs. commands (0.5 should mean 50% chance of a digit)
                 input_string += str(random.randint(1, 9))
             else:
                 input_string += random.choice(commands)
