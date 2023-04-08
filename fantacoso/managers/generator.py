@@ -24,9 +24,9 @@ MAX_point=200
 def easy_cases():
     K=random.randint(10,20)
     P=100
-    M=100
+    E=100
     N=K
-    print(K,N,M,P)
+    print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
          experience = random.randint(1, 5)  # generate a random number for experience, not exceeding M
@@ -46,6 +46,7 @@ def average_cases():
          gender = random.randint(0,1)  # generate a random number between 0 and 1 for gender
          # print the three numbers separated by spaces
          print(points, experience, gender)
+            
 def intermediate_cases():
     K=random.randint(150,250)
     P=random.randint(0,100)
@@ -62,7 +63,7 @@ def intermediate_cases():
 def advanced_cases():
     K=random.randint(300,500)
     P=random.randint(0,100)
-    E=random.randint(1000,2000)
+    E=random.randint(1001,2000)
     N=random.randint(200,K)
     print(K,N,E,P)
     for i in range(K):
