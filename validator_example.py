@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-#
-# Generator Final Contest LUISS ... 2023
-# Task n. x "Nome completo task"
-# autori
-#
+#####
+# LUISS Final Contest 2023
+# Task n. x "Nome Task"
+# INPUT VALIDATOR
+# Autori
+#####
 
 # import librerie necessarie
 
@@ -14,4 +15,4 @@ T = int(T)
 assert 0 <= T <= 25
 for t in range(T):
     assert input() == "" # spazio vuoto
-    # controlla tutti gli altri
+    # controlla tutti gli altri input generati

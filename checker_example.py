@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-#
-# Checker Final Contest LUISS ... 2023
-# Task n. x "Nome completo task"
-# autori
-#
+#####
+# LUISS Final Contest 2023
+# Task n. x "Nome Task"
+# SOLUTION CHECKER
+# Autori
+#####
 
 from distutils.command.build_scripts import first_line_re
 # import librerie necessarie

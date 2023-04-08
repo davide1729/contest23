@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
-# soluzione ...
-# autore / autori
+#####
+# LUISS Final Contest 2023
+# Task n. x "Nome Task"
+# CORRECT SOLUTION
+# Autori
+#####
 
 # funzioni per risolvere problema
 

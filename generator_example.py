@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-#
-# Generator Final Contest LUISS ... 2023
-# Task n. x "Nome completo task"
-# autori
-#
+#####
+# LUISS Final Contest 2023
+# Task n. x "Nome Task"
+# INPUT GENERATOR
+# Autori
+#####
 
 # import librerie
 import random
@@ -17,8 +18,6 @@ MAXK = 100
 MAXC = MAXK
 MAXk = 10**3
 MAXc = MAXN
-
-#Generator_contest
 
 def easy_cases():
     
