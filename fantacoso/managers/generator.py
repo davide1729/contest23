@@ -11,20 +11,18 @@
 import random
 
 # Constraint
-'''MAXK = 5*10**2
+MAXK = 5
 MAXN = MAXK
-MAXM = 25*10**2
+MAXE = MAXK*5
 MAXP = 100
-MAX_point=200'''
+MAX_experience=5
+MIN_experience=1
+MAX_point=200
 
-MAXK = 20
-MAXN = MAXK
-MAXM = 10
-MAXP = 100
 
 
 def easy_cases():
-    K=random.randint(10,MAXK)
+    K=random.randint(1,MAXK)
     P=100
     E=100
     N=K
@@ -37,9 +35,9 @@ def easy_cases():
          print(points, experience, gender)
 
 def average_cases():
-    K=random.randint(70,100)
+    K=random.randint(1,MAXK)
     P=random.randint(0,100)
-    E=random.randint(40,400)
+    E=random.randint(1,K*5)
     N=random.randint(20,K)
     print(K,N,E,P)
     for i in range(K):
@@ -50,10 +48,10 @@ def average_cases():
          print(points, experience, gender)
             
 def intermediate_cases():
-    K=random.randint(150,250)
+    K=random.randint(1,MAXK)
     P=random.randint(0,100)
-    E=random.randint(100,1000)
-    N=random.randint(60,K)
+    E=random.randint(1,K*5)
+    N=random.randint(1,K)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
@@ -63,10 +61,10 @@ def intermediate_cases():
          print(points, experience, gender)
 
 def advanced_cases():
-    K=random.randint(300,500)
+    K=random.randint(1,MAXK)
     P=random.randint(0,100)
-    E=random.randint(1001,2000)
-    N=random.randint(200,K)
+    E=random.randint(1,K*5)
+    N=random.randint(1,K)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
@@ -76,10 +74,10 @@ def advanced_cases():
          print(points, experience, gender)
 
 def edge_cases():
-    K=random.randint(10,20)
+    K=random.randint(1,MAXK)
     P=0
-    N=random.randint(5,K)
-    E=random.randint(20,80)
+    E=random.randint(1,K*5)
+    N=random.randint(1,K)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
