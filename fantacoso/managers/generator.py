@@ -87,7 +87,7 @@ def edge_cases():
 
 CASES = [easy_cases]*2 + [average_cases]*7 + [intermediate_cases]*7 + [advanced_cases]*8 + [edge_cases]*1
 
-print(len(CASES)) # DEVE PRINTARE 25
+print(len(CASES)) 
 for x in CASES:
      print()
      x()
