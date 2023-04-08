@@ -44,7 +44,7 @@ for t in range(1,T+1):
     res=knapsack(boys,experiences,points,P,M,N)[1]
 
     print("Case #{}: ".format(t), end="")
-    for e in ris:
+    for e in res:
         print(e, end=" ")
     print()
 
