@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
 #####
-# Checker Final Contest LUISSTraining 2023
+# Final Contest LUISSTraining 2023
 # Task n. 3 "PageRank"
+# SOLUTION CHECKER
 # Demetrio F. Cardile, Davide Beltrame
 #####
 
@@ -95,7 +96,7 @@ for t in range(T):
         neighbors[node].remove(neighbors[node][0])
     pagerank()
     res = max
-    outputs.append(res)
+    outputs.append(str(res))
 
 def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker
