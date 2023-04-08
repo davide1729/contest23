@@ -2,19 +2,31 @@
 
 #####
 # LUISS Final Contest 2023
-# Task n. x "Nome Task"
-# CORRECT SOLUTION
-# Autori
+# Task n. 4 "Breaking into LOFT"
+# SOLUTION CHECKER
+# Francesca Romana Sanna, Leonardo Azzi
 #####
 
-# Leonardo Azzi, Soluzione v1:
-# Possible changes:
-#   import blist?
-#   use a list of lists instead of a dict?  (dict is faster, but list is more memory efficient)
+from distutils.command.build_scripts import first_line_re
+from functools import lru_cache
+from itertools import accumulate
+from parser import Parser
+import json
+from sys import argv, exit, stderr
 
-T = int(input()) # numero di casi di test
+if len(argv) != 3:
+    print("Usage: %s input_file output_file" % argv[0], file=stderr)
+    exit(1)
+
+task_input = open(argv[1], "r")
+human_output = open(argv[2], "r")
+
+# reading input file and generating correct output
+
+outputs = [] 
 
 def decoder(test):
+    global result
     matrix = {}
     cursor_index = [0, 0]
     for i in test:
@@ -42,23 +54,24 @@ def decoder(test):
     result = []
     for n in range(len(matrix)):
         result.append(matrix[n])
-    return result
+
+T = int(task_input.readline())
 
 for t in range(T):
-    input() # spazio
-    test = input()
-    print(f"Case #{t+1}: {decoder(test)}")
+    task_input.readline()
+    decoder()
+	# mettere soluzione in res
+    outputs.append(str(result))
 
+def evaluate(num, stream):
+    correct_output = outputs[num-1] # quelli del checker
+    user_output = stream.str() # quello della soluzione
+    stream.end()
+    if user_output == correct_output:
+        return 1.0
+    else:
+        return 0.0
 
+parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False)
 
-# test_list = {r"1{>}2{_}3{>}4{<}5{>}6{<}7{>}8{<}9" : [[1,2],[3,5,4,7,6,9,8]],
-# r"1{>}23{_}4{>}56{_}7{>}89" : [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-# r"1{_}23{^}4{_}56{^}7{_}89" : [[1, 4, 7], [2, 3, 5, 8, 9, 6]],
-# r"1{>}2{>}3{<}{_}4{>}5{>}6{<}{_}7{>}8{>}9" : [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}
-
-# for tests in test_list:
-#     print(f"Test: {tests}\n")
-#     print(f"Expected: {test_list[tests]}\n")
-#     print(f"Result: {decoder(tests)}\n")
-#     print(f"Passed: {decoder(tests) == test_list[tests]}\n")
-#     print()
+print(json.dumps(parser.run()))

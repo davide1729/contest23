@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #####
-# Final Contest LUISSTraining 2023
+# LUISS Final Contest 2023
 # Task n. 3 "PageRank"
 # SOLUTION CHECKER
 # Demetrio F. Cardile, Davide Beltrame

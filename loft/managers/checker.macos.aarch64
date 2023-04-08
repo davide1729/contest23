@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
 #####
-# Final Contest LUISSTraining 2023
-# Task n. 4 "LOFT"
+# LUISS Final Contest 2023
+# Task n. 4 "Breaking into LOFT"
 # INPUT GENERATOR
 # Francesca Romana Sanna, Leonardo Azzi
 #####
 
 from distutils.command.build_scripts import first_line_re
-# import librerie necessarie
 from functools import lru_cache
 from itertools import accumulate
 from parser import Parser
