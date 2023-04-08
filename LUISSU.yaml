@@ -1,0 +1,16 @@
+name: Allenamento LUISS 2023 - Final Contest 
+description: |
+  Final Contest - _Allenamento LUISS_2023
+
+duration: 86400
+window_duration: 18000
+
+tasks:
+    - Problem A
+    - Problem B
+    - Problem C
+    - Problem D
+users:
+    -   token: OHPdCcz7l7d0zijq
+        name: Super
+        surname: Secret
