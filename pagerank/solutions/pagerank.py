@@ -3,7 +3,6 @@
 # soluzione pagerank
 # Demetrio e Davide
 
-import networkx as nx #this is for network
 import time # this is to get computational time
 
 T = int(input())
