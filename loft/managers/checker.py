@@ -26,23 +26,25 @@ human_output = open(argv[2], "r")
 
 outputs = [] 
 
+# funzioni per risolvere il problema
+
 def decoder(test):
-    matrix = {}
+    matrix = {0 : []}
     cursor_index = [0, 0]
     for i in test:
         if i == '{' or i == '}':
             continue
         elif i == '_':
-            cursor_index[0] = cursor_index[0] + 1
+            cursor_index[0] += 1
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1])
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1])
             #Se necessario, implementare un cap massimo di "profondità" (usa min(max_depth, cursor_index[0] + 1))
         elif i == '^':
             cursor_index[0] = max(0, cursor_index[0] - 1)
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1])
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1])
         elif i == '>':
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1] + 1)
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1] + 1)
         elif i == '<':
             cursor_index[1] = max(0, cursor_index[1] - 1)
             #print(f"Cursor index: {cursor_index[1]}")
@@ -53,15 +55,15 @@ def decoder(test):
             #print(matrix)
     result = []
     for n in range(len(matrix)):
-        result.append(matrix[n])
+        result.append(matrix.get(n, []))
     return result
 
 T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
-    result = decoder(task_input.readline())
-    outputs.append(str(result))
+    res = decoder(task_input.readline())
+    outputs.append(str(res))
 
 def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker
