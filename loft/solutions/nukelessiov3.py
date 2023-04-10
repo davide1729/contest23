@@ -33,12 +33,10 @@ def decoder(test):
             cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1] + 1)
         elif i == '<':
             cursor_index[1] = max(0, cursor_index[1] - 1)
-            #print(f"Cursor index: {cursor_index[1]}")
         elif i.isdigit():
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
-            #print(matrix)
     result = []
     for n in range(len(matrix)):
         result.append(matrix[n])

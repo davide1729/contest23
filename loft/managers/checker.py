@@ -13,7 +13,8 @@ from itertools import accumulate
 from parser import Parser
 import json
 from sys import argv, exit, stderr
-
+print(stderr)
+print(argv)
 if len(argv) != 3:
     print("Usage: %s input_file output_file" % argv[0], file=stderr)
     exit(1)
@@ -26,7 +27,6 @@ human_output = open(argv[2], "r")
 outputs = [] 
 
 def decoder(test):
-    global result
     matrix = {}
     cursor_index = [0, 0]
     for i in test:
@@ -54,13 +54,13 @@ def decoder(test):
     result = []
     for n in range(len(matrix)):
         result.append(matrix[n])
+    return result
 
 T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
-    decoder()
-	# mettere soluzione in res
+    result = decoder(task_input.readline())
     outputs.append(str(result))
 
 def evaluate(num, stream):
