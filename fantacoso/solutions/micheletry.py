@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def knapsack(students, n, m, p):
     # initialize the dp array
     dp = [[[-1 for _ in range(101)] for _ in range(m*n+1)] for _ in range(n+1)]

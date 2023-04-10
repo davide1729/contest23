@@ -2,9 +2,9 @@
 
 #####
 # LUISS Final Contest 2023
-# Task n. x "Nome Task"
+# Task n. 4 "Breaking into LOFT"
 # CORRECT SOLUTION
-# Autori
+# Francesca Romana Sanna, Leonardo Azzi
 #####
 
 # Leonardo Azzi, Soluzione v1:

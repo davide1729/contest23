@@ -31,9 +31,10 @@ outputs = []
 T = int(task_input.readline())
 
 for t in range(T):
-	task_input.readline()
+    res = "la soluzione che viene dopo Case #x: "
+    task_input.readline()
 	# mettere soluzione in res
-	outputs.append(res)
+    outputs.append(res)
 
 def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker
