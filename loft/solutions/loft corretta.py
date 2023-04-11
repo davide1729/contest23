@@ -15,22 +15,31 @@
 T = int(input()) # numero di casi di test
 
 def decoder(test):
-    matrix = {0 : []}
+    # Remove brackets
+    test = test.replace('{', '').replace('}', '')
+
+    # Ignore consecutive '^' commands at the beginning
+    while test and test[0] == '^':
+        test = test[1:]
+        
+    if test == "":
+        return []
+    
+    matrix = {0: []}
     cursor_index = [0, 0]
+    
+        
     for i in test:
-        if i == '{' or i == '}':
-            continue
-        elif i == '_':
-            cursor_index[0] = cursor_index[0] + 1
+        if i == '_':
+            cursor_index[0] += 1
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1])
-            #Se necessario, implementare un cap massimo di "profondità" (usa min(max_depth, cursor_index[0] + 1))
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1])
         elif i == '^':
             cursor_index[0] = max(0, cursor_index[0] - 1)
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1])
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1])
         elif i == '>':
-            cursor_index[1] = min(len(matrix[cursor_index[0]]), cursor_index[1] + 1)
+            cursor_index[1] = min(len(matrix.get(cursor_index[0], [])), cursor_index[1] + 1)
         elif i == '<':
             cursor_index[1] = max(0, cursor_index[1] - 1)
         elif i.isdigit():
@@ -38,8 +47,12 @@ def decoder(test):
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
     result = []
+    
+    if len(matrix) == 1:
+        return matrix[0]
+    
     for n in range(len(matrix)):
-        result.append(matrix[n])
+        result.append(matrix.get(n, []))
     return result
 
 for t in range(T):
