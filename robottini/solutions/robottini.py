@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+#####
+# LUISS Final Contest 2023
+# Task n. 4 "Robottini Mercenari"
+# CORRECT SOLUTION
+# Maria Chiara Lischi, Matteo Spadaccia
+#####
+
 import itertools
 import networkx as nx
 
@@ -71,3 +80,12 @@ def solution(inputs_dict, connections_dict2):
             solution = selected
     
     return(solution, max_val)
+
+T = int(input()) # numero di casi di test
+
+for t in range(T):
+	input() # spazio
+	
+    # adattare la risoluzione per inserirla in "res"
+	print(f"Case #{t+1}: {res}") # output corretto
+

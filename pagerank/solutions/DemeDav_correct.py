@@ -7,8 +7,6 @@
 # Demetrio F. Cardile, Davide Beltrame
 #####
 
-import time # this is to get computational time
-
 T = int(input())
 a0 = int(input())
 
