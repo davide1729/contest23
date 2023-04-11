@@ -13,8 +13,7 @@ from itertools import accumulate
 from parser import Parser
 import json
 from sys import argv, exit, stderr
-print(stderr)
-print(argv)
+
 if len(argv) != 3:
     print("Usage: %s input_file output_file" % argv[0], file=stderr)
     exit(1)
