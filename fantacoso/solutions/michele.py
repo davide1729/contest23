@@ -27,7 +27,7 @@ def knapsack(genders, experiences, scores, max_gender_ratio, max_experience, max
 T=int(input())
 
 for t in range(1,T+1):
-    ln=input()
+    input()
     ln=input().split(" ")
     K=int(ln[0]) #number of students in the school
     N=int(ln[1]) #maximum number of students that can be selected for a team

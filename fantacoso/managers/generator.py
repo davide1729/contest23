@@ -11,7 +11,7 @@
 import random
 
 # Constraint
-MAXK = 5
+MAXK = 20
 MAXN = MAXK
 MAXE = MAXK*5
 MAXP = 100
