@@ -47,8 +47,8 @@ def knapsack(genders, experiences, scores, max_gender_ratio, max_experience, max
 
 T = int(task_input.readline())
 
-for t in range(T):
-    task_input.readline()
+for t in range(T+1):
+    ln=task_input.readline()
 	# mettere soluzione in res
     ln=task_input.readline().split(" ")
     K=int(ln[0]) #number of students in the school
@@ -60,7 +60,7 @@ for t in range(T):
     boys=[0] #list with the gender (1 for male, 0 for female)
     points=[0] #list with the scores 
     
-    for i in range(N):
+    for i in range(K):
         ln=task_input.readline().split()
         points.append(int(ln[0]))
         experiences.append(int(ln[1]))
