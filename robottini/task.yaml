@@ -3,3 +3,4 @@
 name: robottini
 description: Robottini Mercenari
 max_score: 25
+submission_timeout: 600

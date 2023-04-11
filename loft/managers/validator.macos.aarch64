@@ -7,8 +7,6 @@
 # Francesca Romana Sanna, Leonardo Azzi, Davide Beltrame
 #####
 
-# import librerie necessarie
-
 T = float(input()) # 25
 assert T == int(T)
 T = int(T)
@@ -17,4 +15,3 @@ for t in range(T):
     assert input() == "" # spazio vuoto
     S = input()
     assert S == str(S)
-    # controlla tutti gli altri input generati

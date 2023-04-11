@@ -13,9 +13,9 @@ import networkx as nx #this is for network
 # Constraints
 
 global max_N, easy_N, average_N
-max_N = 2000
+max_N = 250
 easy_N = 50
-average_N = 1000
+average_N = 90
 
 # Creating the random graph using Erdős–Rényi model.
 
@@ -80,7 +80,23 @@ def edge_case_g_maker():
             if i not in neighbors:  
                 neighbors[i] = []
 
-CASES = [easy_g_maker]*4 + [average_g_maker]*8 + [advanced_g_maker]*8 + [edge_case_g_maker]*5
+def edge_case_g_maker_2():
+    global num_nodes
+    num_nodes = random.randint(average_N,max_N)
+    p = 1
+    global neighbors
+    neighbors = {}
+    G_er_standard = nx.erdos_renyi_graph(num_nodes, p)
+    for node in G_er_standard.nodes():
+        for i in G_er_standard.neighbors(node):
+            neighbors[node] = []
+        for i in G_er_standard.neighbors(node):
+            neighbors[node].append(i)
+        for i in range(0,num_nodes):  
+            if i not in neighbors:  
+                neighbors[i] = []
+
+CASES = [easy_g_maker]*4 + [average_g_maker]*8 + [advanced_g_maker]*8 + [edge_case_g_maker]*3 +[edge_case_g_maker_2]*2
 
 print(len(CASES))
 a = random.randint(0,9)

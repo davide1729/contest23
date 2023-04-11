@@ -45,8 +45,7 @@ def pagerank():
             sum = 0
             for j in neighbors[i]:
                 sum += mypr2[j]/k_out[j]        
-            mypr2[i]= a/N + (1-a)*sum
-        #print(mypr2[1])    
+            mypr2[i]= a/N + (1-a)*sum  
         iterations += 1 # iteration counter
 
         for i in mypr2:

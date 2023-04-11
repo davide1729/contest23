@@ -3,3 +3,4 @@
 name: loft
 description: Breaking into LOFT
 max_score: 25
+submission_timeout: 600

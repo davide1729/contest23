@@ -3,3 +3,4 @@
 name: fantacoso
 description: FantaOlimpiadi
 max_score: 25
+submission_timeout: 600

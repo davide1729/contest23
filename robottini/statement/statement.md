@@ -1,5 +1,8 @@
 # **Robottini Mercenari** (*robottini*)
 
+> **Attenzione**: Questo task ha un tempo limite di 10 minuti per l'invio della soluzione. Una volta richiesto un input, il timer partirà in automatico, e dopo la scadenza non sarà più possibile inviare una soluzione per quell'input.
+> *È sempre possibile richiedere un nuovo input*, per cui non preoccuparti se il timer scade: dovrai semplicemente richiedere e scaricare un nuovo input.
+
 La Professoressa Sinaimeri ha bisogno di assistenza durante le lezioni, in particolare nella moderazione della chat su Discord.
 I tutor, resisi conto che i bot che hanno programmato sul server del nostro Corso sono inefficaci,
 vogliono reclutare una squadra di robottini mercenari (facilmente reperibili nel dark web) per assisterli nel loro compito. Matteo e Maria Chiara, che hanno suggerito al resto dei tutor loro colleghi questa soluzione, scoprono di avere tra le mani dei robottini in carne e ossa – o meglio, in cavi e acciaio – ma decidono di impiegare comunque questi piccoli assistenti.
