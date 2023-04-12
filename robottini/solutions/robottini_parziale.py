@@ -161,8 +161,7 @@ def greedy_value_on_loss(inputs_dict, connections_dict):
             for jj in temp[ii]:
                 if jj in cycle_inputs.keys():
                     actual_connections_dict[ii] = actual_connections_dict[ii]+[jj]
-    
-        print(actual_connections_dict)
+
         # computing the potential gain that choosing each integer implies 
         gain_dict = cycle_inputs.copy()
         fraction_dict = {}
