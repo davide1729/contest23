@@ -59,7 +59,6 @@ def decoder(test):
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
-    global result
     result = []
     
     if len(matrix) == 1:
@@ -73,19 +72,20 @@ T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
-    decoder(task_input.readline())
-    res = result
-    outputs.append(str(res))
+    line = task_input.readline()
+    risultato_corretto = decoder(line)
+    outputs.append(risultato_corretto)
 
 def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker
     user_output = stream.str() # quello della soluzione
     stream.end()
+    
     if user_output == correct_output:
         return 1.0
     else:
         return 0.0
 
-parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False)
+parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False, str_max_len=10**7)
 
 print(json.dumps(parser.run()))
