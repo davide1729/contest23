@@ -81,17 +81,14 @@ def evaluate(num, stream):
     user_output = stream.line() # quello della soluzione
     stream.end()
     
+    
+    # Try to remove spaces
     try:
-        user_output = user_output.split(": ")[1]
+        correct_output = correct_output.replace(" ", "")
+        user_output = user_output.replace(" ", "")
     except:
         pass
     
-    try:
-        user_output = str(user_output).rstrip("\n")
-        correct_output = str(correct_output).rstrip("\n")
-    except:
-        pass
-        
     if str(user_output) == str(correct_output):
         return 1.0
     else:
