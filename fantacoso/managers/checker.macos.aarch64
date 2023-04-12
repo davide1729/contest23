@@ -2,9 +2,9 @@
 
 #####
 # LUISS Final Contest 2023
-# Task n. x "Nome Task"
+# Task n. 1 "FantaOlimpiadi"
 # SOLUTION CHECKER
-# Autori
+# Michele Turco, Chiara Baldoni
 #####
 
 from distutils.command.build_scripts import first_line_re

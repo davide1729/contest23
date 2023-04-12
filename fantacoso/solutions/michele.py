@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+#####
+# LUISS Final Contest 2023
+# Task n. 1 "FantaOlimpiadi"
+# CORRECT SOLUTION
+# Michele Turco
+#####
+
 """
 @author: Michele Turco
 

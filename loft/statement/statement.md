@@ -1,5 +1,8 @@
 # **Breaking into LOFT** (*loft*)
 
+> **Attenzione**: Questo task ha un tempo limite di 10 minuti per l'invio della soluzione. Una volta richiesto un input, il timer partirà in automatico, e dopo la scadenza non sarà più possibile inviare una soluzione per quell'input.
+> *È sempre possibile richiedere un nuovo input*, per cui non preoccuparti se il timer scade: dovrai semplicemente richiedere e scaricare un nuovo input.
+
 Dopo una lunga giornata trascorsa tra lezioni e call di dipartimento, il Professor Martino decide di riposarsi un po' registrando un pezzo inedito con la sua chitarra, e per fare ciò sale al LOFT (Laboratory Of Fabulous Things), il laboratorio polifunzionale più moderno e tecnologico della LUISS, gestito dal Professor Marco Iecher.
 
 Tuttavia, una volta scalati gli interminabili **sei piani di scale** per arrivare al LOFT, scopre che è impossibile accedervi poiché all'interno sono contenute le soluzioni del contest finale del nostro Corso. Per aprire la porta è infatti necessario inserire un codice che solamente il Professor Laura conosce.
@@ -22,7 +25,7 @@ La prima riga del file di input contiene un intero $T$, il numero di casi di tes
 
 Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \{<\} (sinistra), \{>\} (destra), \{^\} (su), \{_\} (giù).
 
-> _Si tenga presente che un comando  \{>\} (destra) alla fine della sequenza non ha effetto e un comando \{<\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{^\} (su) sulla prima sequenza (quella "sopra") ((e \{_\} (giù) sull'ultima sequenza (quella "sotto").))_
+> _Si tenga presente che un comando  \{>\} (destra) alla fine della sequenza non ha effetto e un comando \{<\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{^\} (su) sulla prima sequenza (quella "sopra") (aggiunti esempi sotto*)._
 
 ## Dati di output
 
@@ -151,4 +154,18 @@ riga 2: [456]
 riga 3: [789]
 ```
 Attraverso questa sequenza di comandi, il programma riesce a decodificare i movimenti del cursore e a inserire i numeri appropriati nella matrice.
+
+## * Altri esempi:
+### Input:
+```
+"{<}{<}{<}{<}"
+"{>}{>}{>}{>}"
+"{_}6"
+```
+### Output:
+```
+[]
+[]
+[[], [6]]
+```
 

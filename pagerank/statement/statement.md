@@ -1,5 +1,8 @@
 # **PageRank** (*pagerank*)
 
+> **Attenzione**: Questo task ha un tempo limite di 10 minuti per l'invio della soluzione. Una volta richiesto un input, il timer partirà in automatico, e dopo la scadenza non sarà più possibile inviare una soluzione per quell'input.
+> *È sempre possibile richiedere un nuovo input*, per cui non preoccuparti se il timer scade: dovrai semplicemente richiedere e scaricare un nuovo input.
+
 La Professoressa Finocchi ha sfidato i tutor: devono riuscire a calcolare quanto sia facile trovare la pagina del Corso di preparazione alle Olimpiadi a partire da vari URL, come quello del sito della LUISS.
 
 La LUISS ha fornito una serie di grafi che rappresentano i collegamenti tra vari siti web legati all'ateneo – per esempio, *sport.luiss.it* oppure *impresaemanagement.luiss.it* – tra cui è sempre presente il suddetto sito del nostro Corso. Questi grafi non sono orientati: la direzione del collegamento tra due pagine ($A$ contiene un link a $B$, o viceversa) è irrilevante.
@@ -55,6 +58,8 @@ Case #1: 4
 
 In questo caso, dopo aver ricostruito il grafo, applicato l'algoritmo con il corretto $\alpha$ e rilevato il nodo con il valore di PageRank massimo, se ne ottiene l'indice, in questo caso 4.
 
+> N.B. nel caso in cui più nodi avessero lo stesso valore di $PR$, quello da indicare nella soluzione è il primo di questi.
+
 ---
 
 *Aiuta Demetrio e Davide a scoprire la posizione della pagina con il PageRank più alto, ossia a verificare che sia quella del nostro Corso; altrimenti, la Professoressa Finocchi troverà presto due nuovi tutor per rimpiazzarli!*
@@ -67,13 +72,13 @@ Il tuo input sarà dato da:
 - il numero $N$ di nodi del grafo;
 - L'indice $i$ del $(i+1)$ esimo nodo, seguito da uno spazio e dagli indici dei nodi con cui è connesso, separati da uno spazio.
 
-N.B. **tutti** i nodi del grafo sono rappresentati, quindi un nodo isolato sarà presente nell'input ma non sarà seguito da alcun numero.
+> N.B. **tutti** i nodi del grafo sono rappresentati, quindi un nodo isolato sarà presente nell'input ma non sarà seguito da alcun numero.
 Inoltre, si ricorda che nel caso di più casi di test, essi sono separati da una riga vuota.
 
 ## Assunzioni
 - $i$ intero, $\alpha$ naturale;
 - $\alpha <10$;
-- $0 < N \leq 2*10^3$;
+- $0 < N \leq 10^3$;
 - $0 \leq i < N$.
 
 

@@ -3,29 +3,15 @@
 #####
 # LUISS Final Contest 2023
 # Task n. 4 "Breaking into LOFT"
-# SOLUTION CHECKER
+# CORRECT SOLUTION
 # Francesca Romana Sanna, Leonardo Azzi
 #####
 
-from distutils.command.build_scripts import first_line_re
-from functools import lru_cache
-from itertools import accumulate
-from parser import Parser
-import json
-from sys import argv, exit, stderr
+# Leonardo Azzi, Soluzione v1:
+# Possible changes:
+#   import blist?
+#   use a list of lists instead of a dict?  (dict is faster, but list is more memory efficient)
 
-if len(argv) != 3:
-    print("Usage: %s input_file output_file" % argv[0], file=stderr)
-    exit(1)
-
-task_input = open(argv[1], "r")
-human_output = open(argv[2], "r")
-
-# reading input file and generating correct output
-
-outputs = [] 
-
-# funzioni per risolvere il problema
 
 def decoder(test_case):
     # Remove brackets
@@ -68,32 +54,9 @@ def decoder(test_case):
         risultato_corretto.append(matrix.get(n, []))
     return risultato_corretto
 
-T = int(task_input.readline())
+T = int(input()) # numero di casi di test
 
-for t in range(T):
-    task_input.readline()
-    line = task_input.readline()
-    res = str(decoder(line))
-    outputs.append(str(res))
-
-def evaluate(num, stream):
-    correct_output = str(outputs[num-1]) # quelli del checker
-    user_output = stream.line() # quello della soluzione
-    stream.end()
-    
-    
-    # Try to remove spaces
-    try:
-        correct_output = correct_output.replace(" ", "")
-        user_output = user_output.replace(" ", "")
-    except:
-        pass
-    
-    if str(user_output) == str(correct_output):
-        return 1.0
-    else:
-        return 0.0
-
-parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False, str_max_len=10**7)
-
-print(json.dumps(parser.run()))
+for t in range(1, T+1):
+    input() # spazio
+    test = input()
+    print(f"Case #{t}: {str(decoder(test))}")

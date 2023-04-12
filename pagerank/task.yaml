@@ -3,3 +3,4 @@
 name: pagerank
 description: PageRank
 max_score: 25
+submission_timeout: 600

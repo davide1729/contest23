@@ -2,7 +2,7 @@
 
 #####
 # LUISS Final Contest 2023
-# Task n. 1 "fantacoso"
+# Task n. 1 "FantaOlimpiadi"
 # INPUT GENERATOR
 # Michele Turco
 #####
@@ -11,9 +11,9 @@
 import random
 
 # Constraint
-MAXK = 20
+MAXK = 7
 MAXN = MAXK
-MAXE = MAXK*5
+MAXE = MAXK*1.5
 MAXP = 100
 MAX_experience=5
 MIN_experience=1
