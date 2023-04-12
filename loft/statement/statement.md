@@ -25,7 +25,7 @@ La prima riga del file di input contiene un intero $T$, il numero di casi di tes
 
 Ciascun caso di test è composto da 1 riga contenente una sequenza di lettere, underscore e comandi \{<\} (sinistra), \{>\} (destra), \{^\} (su), \{_\} (giù).
 
-> _Si tenga presente che un comando  \{>\} (destra) alla fine della sequenza non ha effetto e un comando \{<\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{^\} (su) sulla prima sequenza (quella "sopra") ((e \{_\} (giù) sull'ultima sequenza (quella "sotto").))_
+> _Si tenga presente che un comando  \{>\} (destra) alla fine della sequenza non ha effetto e un comando \{<\} (sinistra) all'inizio della sequenza non ha effetto, stesso vale per un comando \{^\} (su) sulla prima sequenza (quella "sopra") (aggiunti esempi sotto*)._
 
 ## Dati di output
 
@@ -154,4 +154,18 @@ riga 2: [456]
 riga 3: [789]
 ```
 Attraverso questa sequenza di comandi, il programma riesce a decodificare i movimenti del cursore e a inserire i numeri appropriati nella matrice.
+
+## * Altri esempi:
+### Input:
+```
+"{<}{<}{<}{<}"
+"{>}{>}{>}{>}"
+"{_}6"
+```
+### Output:
+```
+[]
+[]
+[[], [6]]
+```
 
