@@ -17,8 +17,6 @@ def get_divisors(n):
     div.append(n)
     return div
 
-# PREPARATION BASING ON N ONLY
-
 def prepare_connections(N):
     # creating dictionary "divisors_dict" containing for each integer up to N a list of its divisors
     divisors_dict = {}
