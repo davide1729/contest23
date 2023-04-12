@@ -77,7 +77,7 @@ for t in range(T):
     outputs.append(res)
 
 def evaluate(num, stream):
-    correct_output = outputs[num-1] # quelli del checker
+    correct_output = str(outputs[num-1]) # quelli del checker
     user_output = stream.str() # quello della soluzione
     stream.end()
     
