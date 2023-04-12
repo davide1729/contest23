@@ -27,22 +27,22 @@ outputs = []
 
 # funzioni per risolvere il problema
 
-def decoder(test):
+def decoder(test_case):
     # Remove brackets
-    test = test.replace('{', '').replace('}', '')
+    test_case = test_case.replace('{', '').replace('}', '')
 
     # Ignore consecutive '^' commands at the beginning
-    while test and test[0] == '^':
-        test = test[1:]
+    while test_case and test_case[0] == '^':
+        test_case = test_case[1:]
         
-    if test == "":
+    if test_case == "":
         return []
     
     matrix = {0: []}
     cursor_index = [0, 0]
     
         
-    for i in test:
+    for i in test_case:
         if i == '_':
             cursor_index[0] += 1
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
@@ -59,33 +59,41 @@ def decoder(test):
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
-    global result
-    result = []
+    risultato_corretto = []
     
     if len(matrix) == 1:
         return matrix[0]
     
     for n in range(len(matrix)):
-        result.append(matrix.get(n, []))
-    return result
+        risultato_corretto.append(matrix.get(n, []))
+    return risultato_corretto
 
 T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
-    decoder(task_input.readline())
-    res = result
+    line = task_input.readline()
+    res = str(decoder(line))
     outputs.append(str(res))
 
 def evaluate(num, stream):
-    correct_output = outputs[num-1] # quelli del checker
-    user_output = stream.str() # quello della soluzione
+    correct_output = str(outputs[num-1]) # quelli del checker
+    user_output = stream.line() # quello della soluzione
     stream.end()
-    if user_output == correct_output:
+    
+    
+    # Try to remove spaces
+    try:
+        correct_output = correct_output.replace(" ", "")
+        user_output = user_output.replace(" ", "")
+    except:
+        pass
+    
+    if str(user_output) == str(correct_output):
         return 1.0
     else:
         return 0.0
 
-parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False)
+parser = Parser(evaluate, T, human_output, int_max_len=20, strict_spaces=False, str_max_len=10**7)
 
 print(json.dumps(parser.run()))

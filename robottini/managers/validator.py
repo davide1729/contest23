@@ -16,7 +16,7 @@ for t in range(T):
     N = float(input())
     assert N == int(N)
     N = int(N)
-    assert 0 < N <= 100
+    assert 0 < N <= 150
     M = float(input())
     assert M == int(M)
     M = int(M)

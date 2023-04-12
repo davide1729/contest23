@@ -89,7 +89,7 @@ def max_cases():
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
-CASES = [easy_cases]*4 + [average_cases]*4 + [intermediate_cases]*5 + [advanced_cases]*8 + [edge_cases]*2 [max_cases]*2
+CASES = [easy_cases]*4 + [average_cases]*4 + [intermediate_cases]*5 + [advanced_cases]*8 + [edge_cases]*2 + [max_cases]*2
 print(len(CASES)) # DEVE PRINTARE 25
 
 for x in CASES:
