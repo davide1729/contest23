@@ -81,7 +81,18 @@ def evaluate(num, stream):
     user_output = stream.str() # quello della soluzione
     stream.end()
     
-    if user_output == correct_output:
+    try:
+        user_output = user_output.split(": ")[1]
+    except:
+        continue
+    
+    try:
+        user_output = str(user_output).rstrip("\n")
+        correct_output = str(correct_output).rstrip("\n")
+    except:
+        continue
+        
+    if str(user_output) == str(correct_output):
         return 1.0
     else:
         return 0.0
