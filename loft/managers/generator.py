@@ -47,10 +47,31 @@ def edge_case_1():
     # Empty input string
     return "{}"
 
-def edge_case_2():
-    # 1 Command repeated multiple times : maybe not necessary
+def edge_case_down():
+    # 1 Command repeated multiple times
     num_commands = random.randint(commands_range[0], commands_range[1])
-    command_string = random.choice(commands)
+    command_string = commands[0]
+    input_string = command_string * num_commands
+    return str(input_string)
+
+def edge_case_up():
+    # 1 Command repeated multiple times
+    num_commands = random.randint(commands_range[0], commands_range[1])
+    command_string = commands[1]
+    input_string = command_string * num_commands
+    return str(input_string)
+
+def edge_case_left():
+    # 1 Command repeated multiple times
+    num_commands = random.randint(commands_range[0], commands_range[1])
+    command_string = commands[2]
+    input_string = command_string * num_commands
+    return str(input_string)
+
+def edge_case_right():
+    # 1 Command repeated multiple times
+    num_commands = random.randint(commands_range[0], commands_range[1])
+    command_string = commands[3]
     input_string = command_string * num_commands
     return str(input_string)
 
@@ -60,7 +81,7 @@ def edge_case_3():
     input_string = ''.join(random.choices(commands, k=input_len))
     return str(input_string + random.choice(commands))
 
-CASES = [easy_case]*4 + [medium_case]*6 + [hard_case]*6 + [edge_case_1]*2 + [edge_case_2]*4 + [edge_case_3]*3
+CASES = [easy_case]*4 + [medium_case]*6 + [hard_case]*6 + [edge_case_1]*2 + [edge_case_down] + [edge_case_up] + [edge_case_left] + [edge_case_right] + [edge_case_3]*3
 
 print(len(CASES))
 
