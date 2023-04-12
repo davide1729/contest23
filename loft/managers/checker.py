@@ -84,13 +84,13 @@ def evaluate(num, stream):
     try:
         user_output = user_output.split(": ")[1]
     except:
-        continue
+        pass
     
     try:
         user_output = str(user_output).rstrip("\n")
         correct_output = str(correct_output).rstrip("\n")
     except:
-        continue
+        pass
         
     if str(user_output) == str(correct_output):
         return 1.0
