@@ -1,4 +1,4 @@
-# Fantacoso (*fantacoso*) (*da modificare*)
+# Fantacoso (*fantacoso*)
 
 > **Attenzione**: Questo task ha un tempo limite di 10 minuti per l'invio della soluzione. Una volta richiesto un input, il timer partirà in automatico, e dopo la scadenza non sarà più possibile inviare una soluzione per quell'input.
 > *È sempre possibile richiedere un nuovo input*, per cui non preoccuparti se il timer scade: dovrai semplicemente richiedere e scaricare un nuovo input.
