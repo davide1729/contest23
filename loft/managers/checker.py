@@ -73,8 +73,8 @@ T = int(task_input.readline())
 for t in range(T):
     task_input.readline()
     line = task_input.readline()
-    res = decoder(line)
-    outputs.append(res)
+    res = str(decoder(line))
+    outputs.append(str(res))
 
 def evaluate(num, stream):
     correct_output = str(outputs[num-1]) # quelli del checker

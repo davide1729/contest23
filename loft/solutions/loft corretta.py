@@ -59,4 +59,4 @@ T = int(input()) # numero di casi di test
 for t in range(1, T+1):
     input() # spazio
     test = input()
-    print(f"Case #{t}: {decoder(test)}")
+    print(f"Case #{t}: {str(decoder(test))}")
