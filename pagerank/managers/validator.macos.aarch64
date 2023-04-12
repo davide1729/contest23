@@ -24,8 +24,6 @@ for t in range(T):
     assert 0 < N <= 2000
     for i in range(N):
         nodes = input().strip().split(" ")
-        print(nodes)
         node_name = int(nodes[0])
         assert node_name < N
         length = int(len(nodes))
-        #print(length)
