@@ -97,4 +97,3 @@ for t in range(T):
     res = max_val
     # adattare la risoluzione per inserirla in "res"
     print(f"Case #{t+1}: {res}") # output corretto
-

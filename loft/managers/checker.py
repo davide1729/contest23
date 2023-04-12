@@ -59,6 +59,7 @@ def decoder(test):
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
+    global result
     result = []
     
     if len(matrix) == 1:
@@ -72,7 +73,8 @@ T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
-    res = decoder(task_input.readline())
+    decoder(task_input.readline())
+    res = result
     outputs.append(str(res))
 
 def evaluate(num, stream):

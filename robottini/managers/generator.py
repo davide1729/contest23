@@ -11,12 +11,12 @@ import random
 
 # Constraints
 
-max_N = 100
+max_N = 10
 easy_N = int(max_N/5)
 avg_N = int(max_N/3)
 int_N = int(max_N/2)
 min_N = 1
-max_M = 1000
+max_M = 100
 easy_M = int(max_M/5)
 avg_M = int(max_M/3)
 int_M = int(max_M/2)
