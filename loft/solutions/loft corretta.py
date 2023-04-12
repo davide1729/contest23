@@ -22,7 +22,7 @@ def decoder(test_case):
         test_case = test_case[1:]
         
     if test_case == "":
-        return str([])
+        return []
     
     matrix = {0: []}
     cursor_index = [0, 0]
@@ -48,11 +48,11 @@ def decoder(test_case):
     risultato_corretto = []
     
     if len(matrix) == 1:
-        return str(matrix[0])
+        return matrix[0]
     
     for n in range(len(matrix)):
         risultato_corretto.append(matrix.get(n, []))
-    return str(risultato_corretto)
+    return risultato_corretto
 
 T = int(input()) # numero di casi di test
 
