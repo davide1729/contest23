@@ -198,10 +198,10 @@ for t in range(T):
         models[models_list[n]] = power_list[n]
     connections = prepare_connections(M)
     greedy_solutions = []
-    greedy_solutions.append(greedy_loss_based(models, connections))
-    greedy_solutions.append(greedy_value_minus_loss_based(models, connections))
-    greedy_solutions.append(greedy_value_on_loss_n_based(models, connections))
-    greedy_solutions.append(greedy_value_on_loss(models, connections))
+    greedy_solutions.append(greedy_loss_based(models, connections)[1])
+    greedy_solutions.append(greedy_value_minus_loss_based(models, connections)[1])
+    greedy_solutions.append(greedy_value_on_loss_n_based(models, connections)[1])
+    greedy_solutions.append(greedy_value_on_loss(models, connections)[1])
     res = max(greedy_solutions)
     # adattare la risoluzione per inserirla in "res"
     print(f"Case #{t+1}: {res}") # output parzialmente corretto

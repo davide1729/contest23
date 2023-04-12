@@ -73,6 +73,6 @@ for t in range(T):
     for n in range(N):
         models[models_list[n]] = power_list[n]
     connections = prepare_connections(M)
-    res = empirical(models,connections)
+    res = empirical(models,connections)[1]
     # adattare la risoluzione per inserirla in "res"
     print(f"Case #{t+1}: {res}") # output bruteforce
