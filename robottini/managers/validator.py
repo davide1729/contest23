@@ -16,11 +16,11 @@ for t in range(T):
     N = float(input())
     assert N == int(N)
     N = int(N)
-    assert 0 < N <= 50
+    assert 0 < N <= 100
     M = float(input())
     assert M == int(M)
     M = int(M)
-    assert 0 < M <= 100
+    assert 0 < M <= 1000
     models = input().strip().split(" ")
     assert len(models) == N
     powers = input().strip().split(" ")
@@ -30,4 +30,4 @@ for t in range(T):
         assert 2 <= m <= M
     for p in powers:
         p = int(p)
-        assert 0 <= p <= 100
+        assert 0 <= p <= 1000

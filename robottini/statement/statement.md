@@ -48,9 +48,9 @@ Il tuo input, per ciascun caso di test, sarà dato da:
 ---
 
 ## Assunzioni
-- $0 \leq N \leq 50$ intero;
-- $2 \leq M \leq 100$ intero;
-- $0 \leq P \leq 100$ intero;
+- $0 \leq N \leq 100$ intero;
+- $2 \leq M \leq 10^3$ intero;
+- $0 \leq P \leq 10^3$ intero;
 - $2 \leq m_i \leq M$;
 - $0 \leq p_i \leq P$;
 

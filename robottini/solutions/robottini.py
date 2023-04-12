@@ -7,7 +7,6 @@
 # Maria Chiara Lischi, Matteo Spadaccia
 #####
 
-import itertools
 import networkx as nx
 
 def get_divisors(n):
@@ -69,7 +68,7 @@ def solution(inputs_dict, connections_dict2):
                 G.add_edge(ii, jj)
     
     conn_comp = sorted(nx.find_cliques(G), key=len, reverse=True)
-    
+    global max_val
     max_val = 0
     for selected in conn_comp:
         val = 0
@@ -84,8 +83,18 @@ def solution(inputs_dict, connections_dict2):
 T = int(input()) # numero di casi di test
 
 for t in range(T):
-	input() # spazio
-	
+    input() # spazio
+    N = int(input())
+    M = int(input())
+    models = {}
+    models_list = [ int(x) for x in input().strip().split(" ") ]
+    power_list = [ int(x) for x in input().strip().split(" ") ]
+    for n in range(N):
+        models[models_list[n]] = power_list[n]
+    connections = prepare_connections(M)
+    connections_2 = prepare_connections2(M, connections)
+    solution(models, connections_2)
+    res = max_val
     # adattare la risoluzione per inserirla in "res"
-	print(f"Case #{t+1}: {res}") # output corretto
+    print(f"Case #{t+1}: {res}") # output corretto
 

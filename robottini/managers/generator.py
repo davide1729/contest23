@@ -11,17 +11,17 @@ import random
 
 # Constraints
 
-max_N = 50
+max_N = 100
 easy_N = int(max_N/5)
 avg_N = int(max_N/3)
 int_N = int(max_N/2)
 min_N = 1
-max_M = 100
+max_M = 1000
 easy_M = int(max_M/5)
 avg_M = int(max_M/3)
 int_M = int(max_M/2)
 min_M = 2
-max_P = 100
+max_P = 1000
 
 
 def easy_cases():
@@ -71,7 +71,7 @@ def advanced_cases():
 def edge_cases():
     
     N = 1
-    M = 1
+    M = 2
     print(N)
     print(M)
     models = random.choices(range(2,M+1), k=N)
