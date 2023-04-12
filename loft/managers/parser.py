@@ -71,6 +71,22 @@ class TokenStream:
             raise ValueError("invalid string")
         return buffer
 
+    def line(self):
+        """
+        Read until the end of the line.
+        Think twice before using this function, if you need it your
+        output format is probably too complicated.
+        """
+        self._skip_spaces()
+        buffer = list()
+        # read all chars that are not spaces
+        while not self._is_eof() and self._probe_char() not in '\n\r':
+            buffer += self._next_char()
+            if len(buffer) > self.str_max_len:
+                raise ValueError("string too long")
+        buffer = "".join(buffer)
+        return buffer
+
     def char(self, validate=lambda x: True):
         """Read a single char, skipping spaces"""
         self._skip_spaces()
