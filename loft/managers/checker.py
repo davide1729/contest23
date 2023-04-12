@@ -27,22 +27,22 @@ outputs = []
 
 # funzioni per risolvere il problema
 
-def decoder(test):
+def decoder(test_case):
     # Remove brackets
-    test = test.replace('{', '').replace('}', '')
+    test_case = test_case.replace('{', '').replace('}', '')
 
     # Ignore consecutive '^' commands at the beginning
-    while test and test[0] == '^':
-        test = test[1:]
+    while test_case and test_case[0] == '^':
+        test_case = test_case[1:]
         
-    if test == "":
-        return []
+    if test_case == "":
+        return str([])
     
     matrix = {0: []}
     cursor_index = [0, 0]
     
         
-    for i in test:
+    for i in test_case:
         if i == '_':
             cursor_index[0] += 1
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
@@ -59,22 +59,22 @@ def decoder(test):
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
             matrix[cursor_index[0]].insert(cursor_index[1], int(i))
             cursor_index[1] += 1
-    result = []
+    risultato_corretto = []
     
     if len(matrix) == 1:
-        return matrix[0]
+        return str(matrix[0])
     
     for n in range(len(matrix)):
-        result.append(matrix.get(n, []))
-    return result
+        risultato_corretto.append(matrix.get(n, []))
+    return str(risultato_corretto)
 
 T = int(task_input.readline())
 
 for t in range(T):
     task_input.readline()
     line = task_input.readline()
-    risultato_corretto = decoder(line)
-    outputs.append(risultato_corretto)
+    res = decoder(line)
+    outputs.append(res)
 
 def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker

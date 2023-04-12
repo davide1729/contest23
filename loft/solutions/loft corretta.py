@@ -13,22 +13,22 @@
 #   use a list of lists instead of a dict?  (dict is faster, but list is more memory efficient)
 
 
-def decoder(leo):
+def decoder(test_case):
     # Remove brackets
-    leo = leo.replace('{', '').replace('}', '')
+    test_case = test_case.replace('{', '').replace('}', '')
 
     # Ignore consecutive '^' commands at the beginning
-    while leo and leo[0] == '^':
-        leo = leo[1:]
+    while test_case and test_case[0] == '^':
+        test_case = test_case[1:]
         
-    if leo == "":
-        return []
+    if test_case == "":
+        return str([])
     
     matrix = {0: []}
     cursor_index = [0, 0]
     
         
-    for i in leo:
+    for i in test_case:
         if i == '_':
             cursor_index[0] += 1
             matrix[cursor_index[0]] = matrix.get(cursor_index[0], [])
@@ -48,11 +48,11 @@ def decoder(leo):
     risultato_corretto = []
     
     if len(matrix) == 1:
-        return matrix[0]
+        return str(matrix[0])
     
     for n in range(len(matrix)):
         risultato_corretto.append(matrix.get(n, []))
-    return risultato_corretto
+    return str(risultato_corretto)
 
 T = int(input()) # numero di casi di test
 
