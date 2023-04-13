@@ -7,8 +7,7 @@ La Professoressa Sinaimeri ha bisogno di assistenza durante le lezioni, in parti
 I tutor, resisi conto che i bot che hanno programmato sul server del nostro Corso sono inefficaci,
 vogliono reclutare una squadra di robottini mercenari (facilmente reperibili nel dark web) per assisterli nel loro compito. Matteo e Maria Chiara, che hanno suggerito al resto dei tutor loro colleghi questa soluzione, scoprono di avere tra le mani dei robottini in carne e ossa – o meglio, in cavi e acciaio – ma decidono di impiegare comunque questi piccoli assistenti.
 
-<img src="dancebig.jpg" alt= “Dancebig” width=40% height=40%>
-
+![dancebig](dancebig.jpg)  
 *Tre esemplari, probabilmente sottratti a una celebre società del Massachusetts*
 
 ---
