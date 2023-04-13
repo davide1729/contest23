@@ -120,7 +120,6 @@ def evaluate(num, stream):
     user_output = int(stream.str()) # quello della soluzione
     stream.end()
     if correct_output - user_output >= 0 and (correct_output - user_output)/correct_output < 0.05:
-    #if user_output == correct_output:
         return 1.0
     else:
         return 0.0
