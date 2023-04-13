@@ -40,7 +40,7 @@ dove `t` è il numero del caso di test (a partire da $1$) e `x` è la sequenza d
 ## Assunzioni
 
 - le sequenze in input sono lunghe al più 25,000,000 caratteri
-- $1 \le T \le 10$.
+- $1 \le T \le 25$.
 
 
 ## Esempi di input/output
