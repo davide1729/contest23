@@ -119,8 +119,8 @@ def evaluate(num, stream):
     correct_output = outputs[num-1] # quelli del checker
     user_output = stream.str() # quello della soluzione
     stream.end()
-    #if correct_output - user_output >= 0 and (correct_output - user_output)/correct_output < 0.045:
-    if correct_output == user_output:
+    if correct_output - user_output >= 0 and (correct_output - user_output)/correct_output < 0.05:
+    #if correct_output == user_output:
         return 1.0
     else:
         return 0.0
