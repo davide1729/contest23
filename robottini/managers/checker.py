@@ -116,8 +116,8 @@ for t in range(T):
     outputs.append(str(res))
 
 def evaluate(num, stream):
-    correct_output = outputs[num-1] # quelli del checker
-    user_output = stream.str() # quello della soluzione
+    correct_output = int(outputs[num-1]) # quelli del checker
+    user_output = int(stream.str()) # quello della soluzione
     stream.end()
     if correct_output - user_output >= 0 and (correct_output - user_output)/correct_output < 0.05:
     #if correct_output == user_output:
