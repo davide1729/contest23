@@ -13,12 +13,12 @@ T = int(T)
 assert 0 <= T <= 25
 for t in range(T):
     assert input() == ""
-    K, N, E, P = input().strip().split(" ")
-    K, N, E, P = float(K), float(N), float(E), float(P)
+    K, N, E, B = input().strip().split(" ")
+    K, N, E, B = float(K), float(N), float(E), float(P)
     assert K == int(K)
     assert N == int(N)
     assert E == int(E)
-    assert P == int(P)
+    assert B == int(B)
     K = int(K)
     for row in range(K):
         points, xp, gender = input().strip().split(" ")
