@@ -13,7 +13,7 @@ import random
 # Constraint
 MAXK = 7
 MAXN = MAXK
-MAXE = MAXK*1.5
+MAXE = MAXK*5
 MAXP = 100
 MAX_experience=5
 MIN_experience=1
