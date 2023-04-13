@@ -12,6 +12,7 @@ assert T == int(T)
 T = int(T)
 assert 0 <= T <= 25
 for t in range(T):
-    assert input() == "" # spazio vuoto
+    spazio = input() # spazio vuoto
+    assert spazio == "" or spazio == "\n" # spazio vuoto
     S = input()
     assert S == str(S)

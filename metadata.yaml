@@ -1,0 +1,41 @@
+name: "Allenamento LUISS 2023 - Final Contest"
+description: |
+  Final Contest - Allenamento LUISS_2023
+  
+  Accedi con il tuo username di https://training.olinfo.it/
+
+  Da quando entri nel sito avrai **5 ore** per finire
+
+  ## Buona gara!
+
+duration: 86400
+window_duration: 18000
+deletable: true
+sections:
+  - name: "Documentazione"
+    url: "documentazione"
+    page: |
+      Elenchiamo qui dei link alla documentazione di _alcuni_ dei linguaggi supportati
+
+      | Linguaggio | Link |
+      |:----:| ---- |
+      | C++ | [cppreference.com](https://en.cppreference.com/w/cpp) / [devdocs.io](https://devdocs.io/cpp/) / [cplusplus.com](http://www.cplusplus.com/reference/) |
+      | C   | [cppreference.com](https://en.cppreference.com/w/c) / [devdocs.io](https://devdocs.io/c/) |
+      | C# | [docs.microsoft.com](https://docs.microsoft.com/en-us/dotnet/csharp/) |
+      | Dart | [devdocs.io](https://devdocs.io/dart~2/) |
+      | Go | [golang.org](https://golang.org/doc/) / [devdocs.io](https://devdocs.io/go/) |
+      | Java | [docs.oracle.com](https://docs.oracle.com/en/java/) / [devdocs.io](https://devdocs.io/openjdk~8/) |
+      | Javascript | [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) / [devdocs.io](https://devdocs.io/javascript/) |
+      | Pascal | [freepascal.org](https://www.freepascal.org/docs-html/current/ref/ref.html) |
+      | PHP | [php.net](https://www.php.net/manual/en/) / [devdocs.io](https://devdocs.io/php/) |
+      | Python 3 | [docs.python.org](https://docs.python.org/3/) / [devdocs.io](https://devdocs.io/python~3.8/) |
+      | Ruby | [ruby-doc.org](https://ruby-doc.org/) / [devdocs.io](https://devdocs.io/ruby~2.6/) |
+
+  - name: "Help"
+    url: "help"
+    page: |
+      Ecco alcuni tutorial che ti potrebbero essere d'aiuto!
+
+      * [Risposte alle domande più frequenti](https://territoriali.olinfo.it/extra_files/tutorials/faq/)
+      * [Come usare Codeblocks per programmare in C/C++](https://territoriali.olinfo.it/extra_files/tutorials/codeblocks/)
+      * [Come usare Lazarus per programmare in Pascal](https://territoriali.olinfo.it/extra_files/tutorials/lazarus/)
