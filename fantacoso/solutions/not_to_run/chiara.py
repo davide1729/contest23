@@ -1,59 +1,92 @@
 #!/usr/bin/env python3
 
-#####
-# LUISS Final Contest 2023
-# Task n. 1 "FantaOlimpiadi"
-# Tentative SOLUTION
-# Chiara Baldoni
-#####
-
 from itertools import combinations
 
-def select_team(candidates, N, E, B):
-    maxP = 0
+NAME = 0
+P = 1
+E = 2
+G = 3
+MALE = 1
 
-    for team in combinations(candidates,N):
+def select_team(candidates, K, M, PERC):
+    maxP = 0
+    best_teams = []
+
+    for team in combinations(candidates,K):
         sumMALE = 0
         sumP = 0
         sumE = 0
         for c in team:
-            sumE += c[1]
-            if c[2] == 1:
+            sumE += c[E]
+            if c[G] == MALE:
                 sumMALE +=1
-            sumP += c[0]
+            sumP += c[P]
         # checks
-        if sumE <= E:
+        if sumE != M * K:
             continue
-        if sumMALE <= B:
+        if sumMALE * 100 > PERC * K:
+            continue
+        if (K-sumMALE) * 100 > PERC * K:
             continue
 
         # team is legit
         if sumP > maxP:
             maxP = sumP
-          
-    return maxP
+            best_teams = [team]
 
-
-T=int(input())
-
-for t in range(1,T+1):
-    input()
-    ln=input().split(" ")
-    K=int(ln[0]) #number of students in the school
-    N=int(ln[1]) #maximum number of students that can be selected for a team
-    E=int(ln[2]) #maximum experience
-    B=int(ln[3]) #maximum percentage of boys
-
-    experiences=[0] #list with the experiences for boys and girls
-    boys=[0] #list with the gender (1 for male, 0 for female)
-    points=[0] #list with the scores 
-    students=[[],[],[]]
+        elif sumP == maxP:
+            best_teams.append(team)
     
-    for i in range(K):
-        ln=input().split()
-        students[0].append(int(ln[0]))
-        students[1].append(int(ln[1]))
-        students[2].append(int(ln[2]))
-    res=select_team(students,N,E,B)
+    assert len(best_teams) == 1
+    return best_teams[0]
 
-    print(f"Case #{t}: {res}")
+
+def print_team(case, team):
+    from operator import itemgetter
+    players = sorted(team, key=itemgetter(1), reverse=True)
+    print(f"Case#{case}:", end="")
+    for c in players:
+        print(f" {c[NAME]}", end="")
+    print()
+
+
+
+
+
+
+tests = [
+    {
+        'N': 4,
+        'K': 2,
+        'M': 4,
+        'PERC': 60,
+        'candidates': [
+            [1, 160, 4, 1],
+            [2, 85, 1, 1], 
+            [3, 90, 2, 1], 
+            [4, 70, 4, 2]
+        ]
+    },
+    {
+        'N': 5,
+        'K': 3,
+        'M': 3,
+        'PERC': 70,
+        'candidates': [
+            [1, 45, 2, 1],
+            [2, 40, 1, 1], 
+            [3, 50, 1, 2], 
+            [4, 90, 4, 1],
+            [5, 100, 4, 2],
+        ]
+    }
+]
+
+for case, test in enumerate(tests):
+    N = test['N']
+    K = test['K']
+    M = test['M']
+    PERC = test['PERC']
+    candidates = test['candidates']
+    assert len(candidates) == N
+    print_team(case+1, select_team(candidates, K, M, PERC))
