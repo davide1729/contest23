@@ -14,7 +14,7 @@ Il programma deve essere in grado di decodificare i movimenti del cursore, rappr
 N.B. 
 Quando il cursore viene mosso alla riga (lista) dopo o a quella prima, verrà posizionato dopo l'ultimo elemento della lista.
 
-![hacker](hacker.jpg)
+<img src="hacker.jpg" alt= “hacker” width=70% height=70%>
 
 *Aiutalo a ricostruire il testo digitato!*
 

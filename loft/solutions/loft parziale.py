@@ -15,7 +15,7 @@
 T = int(input()) # numero di casi di test
 
 def decoder(test):
-    matrix = {}
+    matrix = {0 : []}
     cursor_index = [0, 0]
     for i in test:
         if i == '{' or i == '}':
