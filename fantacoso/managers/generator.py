@@ -12,6 +12,7 @@ import random
 
 # Constraint
 MAXK = 7
+MAXKadvanced=13
 MAXN = MAXK
 MAXE = MAXK*5
 MAXP = 100
@@ -36,9 +37,9 @@ def easy_cases():
 
 def average_cases():
     K=random.randint(1,MAXK)
-    P=random.randint(0,100)
-    E=random.randint(1,K*5)
     N=random.randint(1,K)
+    P=random.randint(0,N)
+    E=random.randint(1,K*3)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
@@ -48,10 +49,10 @@ def average_cases():
          print(points, experience, gender)
             
 def intermediate_cases():
-    K=random.randint(1,MAXK)
-    P=random.randint(0,100)
-    E=random.randint(1,K*5)
+    K=random.randint(1,MAXKadvanced)
     N=random.randint(1,K)
+    P=random.randint(0,N)
+    E=random.randint(1,K*3)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
@@ -61,10 +62,10 @@ def intermediate_cases():
          print(points, experience, gender)
 
 def advanced_cases():
-    K=random.randint(1,MAXK)
-    P=random.randint(0,100)
-    E=random.randint(1,K*5)
+    K=random.randint(1,MAXKadvanced)
     N=random.randint(1,K)
+    P=random.randint(0,N)
+    E=random.randint(1,K*5)
     print(K,N,E,P)
     for i in range(K):
          points = random.randint(0, 200)  # generate a random number between 0 and 100 for points
@@ -86,7 +87,7 @@ def edge_cases():
          # print the three numbers separated by spaces
          print(points, experience, gender)
 
-CASES = [easy_cases]*2 + [average_cases]*7 + [intermediate_cases]*7 + [advanced_cases]*8 + [edge_cases]*1
+CASES = [easy_cases]*4 + [average_cases]*6 + [intermediate_cases]*6 + [advanced_cases]*8 + [edge_cases]*1
 
 print(len(CASES)) 
 for x in CASES:

@@ -29,10 +29,10 @@ dove `t` è il numero del caso di test (a partire da $1$) e `L` rappresenta il p
 
 ## Assunzioni
 
-- $1 \le K \le 500$.
+- $1 \le K \le 13$.
 - $1 \le N \le K$.
 - $1 \le E \le 5*K$.
-- $0 \le B \le K$.
+- $0 \le P \le N$.
 - $1 \le P_i \le 200$.
 - $1 \le E_i \le 5$.
 - $0 \le G_i \le 1$.
