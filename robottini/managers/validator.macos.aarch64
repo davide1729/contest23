@@ -26,8 +26,14 @@ for t in range(T):
     powers = input().strip().split(" ")
     assert len(powers) == N
     for m in models:
+        assert models.count(m) <= 1
+        m = float(m)
+        assert m == int(m)
         m = int(m)
         assert 1 < m <= M
     for p in powers:
+        assert powers.count(p) <= 1
+        p = float(p)
+        assert p == int(p)
         p = int(p)
-        assert 0 <= p <= 1000
+        assert 0 < p <= 1000
