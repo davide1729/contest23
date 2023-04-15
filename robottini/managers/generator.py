@@ -30,8 +30,8 @@ def easy_cases():
     M = random.randint(N+1, easy_M)
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
@@ -41,8 +41,8 @@ def average_cases():
     M = random.randint(N+1, avg_M)
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
@@ -52,8 +52,8 @@ def intermediate_cases():
     M = random.randint(N+1, int_M)
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
@@ -63,8 +63,8 @@ def advanced_cases():
     M = random.randint(N+1, max_M)
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
@@ -74,8 +74,8 @@ def edge_cases():
     M = min_M
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
@@ -84,8 +84,8 @@ def max_cases():
     M = max_M
     print(N)
     print(M)
-    models = random.choices(range(min_M,M+1), k=N)
-    powers = [random.randint(0, max_P) for j in range(N)]
+    models = random.sample(range(min_M, M+1), N)
+    powers = random.sample(range(0, max_P+1), N)
     print(" ".join(str(x) for x in models))
     print(" ".join(str(x) for x in powers))
 
