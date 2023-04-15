@@ -36,4 +36,4 @@ for t in range(T):
         p = float(p)
         assert p == int(p)
         p = int(p)
-        assert 0 < p <= 1000
+        assert 0 <= p <= 1000
